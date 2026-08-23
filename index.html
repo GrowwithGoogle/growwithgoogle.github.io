@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PromptHub | Verified AI Prompt Repository & Blog</title>
+  <meta name="description" content="Community-curated, verified prompt repository for Google Gemini, Claude, ChatGPT, and open-source models." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Elements -->
+  <div class="glow-bg glow-blue"></div>
+  <div class="glow-bg glow-purple"></div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-terminal"></i>
+        </div>
+        <div>
+          <h1>PromptHub</h1>
+          <span class="tagline">Verified AI Prompts & Benchmarks</span>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline" id="ownerModeBtn" onclick="toggleOwnerMode()">
+          <i class="fa-solid fa-shield-halved"></i> <span id="ownerBtnText">Owner Mode</span>
+        </button>
+        <button class="btn btn-primary" onclick="openUploadModal()">
+          <i class="fa-solid fa-plus"></i> Upload Prompt
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container">
+    
+    <!-- Hero / Stats Bar -->
+    <section class="hero-strip">
+      <div class="hero-text">
+        <h2>Curated, Tested & Verified AI Prompts</h2>
+        <p>Explore prompts with verified sources, execution guidelines, and community "Works For Me" (WFM) ratings.</p>
+      </div>
+      <div class="stats-counter">
+        <div class="stat-item">
+          <span class="stat-number" id="totalPromptsCount">0</span>
+          <span class="stat-label">Verified Prompts</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" id="pendingPromptsCount">0</span>
+          <span class="stat-label">Pending Review</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" id="totalVotesCount">0</span>
+          <span class="stat-label">WFM Votes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search & Filter Controls -->
+    <section class="controls-bar">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search by keyword, author, or task..." oninput="handleSearch()" />
+      </div>
+
+      <div class="filter-group">
+        <select id="platformFilter" onchange="handleFilter()">
+          <option value="all">All Models / Platforms</option>
+          <option value="Gemini">Google Gemini</option>
+          <option value="Claude">Anthropic Claude</option>
+          <option value="GPT-4o">OpenAI ChatGPT</option>
+          <option value="DeepSeek">DeepSeek</option>
+          <option value="Llama/Ollama">Local / Llama</option>
+        </select>
+
+        <select id="categoryFilter" onchange="handleFilter()">
+          <option value="all">All Categories</option>
+          <option value="Coding & Agents">Coding & Agents</option>
+          <option value="Local Business & SEO">Local Business & SEO</option>
+          <option value="System Prompts">System Prompts</option>
+          <option value="Writing & Content">Writing & Content</option>
+          <option value="Data & Analytics">Data & Analytics</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Owner Admin Management Banner (Hidden by default) -->
+    <div class="admin-banner" id="adminBanner" style="display: none;">
+      <div class="admin-banner-text">
+        <i class="fa-solid fa-user-check"></i>
+        <strong>Owner Verification Mode Active:</strong> You can approve or reject community uploads and export your master <code>prompts.json</code>.
+      </div>
+      <div class="admin-banner-actions">
+        <button class="btn btn-sm btn-outline" onclick="exportPromptsJSON()">
+          <i class="fa-solid fa-download"></i> Export prompts.json
+        </button>
+        <button class="btn btn-sm btn-danger" onclick="toggleOwnerMode(false)">Exit</button>
+      </div>
+    </div>
+
+    <!-- Prompts Grid / Feed -->
+    <section class="prompts-grid" id="promptsContainer">
+      <!-- Dynamic prompt cards will be injected here by style.js -->
+    </section>
+
+  </main>
+
+  <!-- Upload Modal -->
+  <div class="modal-overlay" id="uploadModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-cloud-arrow-up"></i> Submit a Prompt to PromptHub</h3>
+        <button class="modal-close" onclick="closeUploadModal()">&times;</button>
+      </div>
+      
+      <form id="promptUploadForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label>Prompt Title *</label>
+          <input type="text" id="formTitle" required placeholder="e.g. Gemini 2.0 Local Review SEO Responder" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Target Platform / Model *</label>
+            <select id="formPlatform" required>
+              <option value="Gemini">Google Gemini</option>
+              <option value="Claude">Anthropic Claude</option>
+              <option value="GPT-4o">OpenAI ChatGPT</option>
+              <option value="DeepSeek">DeepSeek</option>
+              <option value="Llama/Ollama">Local / Llama</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Category *</label>
+            <select id="formCategory" required>
+              <option value="Coding & Agents">Coding & Agents</option>
+              <option value="Local Business & SEO">Local Business & SEO</option>
+              <option value="System Prompts">System Prompts</option>
+              <option value="Writing & Content">Writing & Content</option>
+              <option value="Data & Analytics">Data & Analytics</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Prompt Text (Column 1) *</label>
+          <textarea id="formPromptText" required placeholder="Paste the exact prompt here. Include [Variables] in brackets..."></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Source / Citation (Column 2) *</label>
+            <input type="text" id="formSource" required placeholder="e.g. Andy Kieckhefer (@thepokacloud) or Paper URL" />
+          </div>
+          <div class="form-group">
+            <label>Source Link URL (Optional)</label>
+            <input type="url" id="formSourceUrl" placeholder="https://..." />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>How to Use & Intended Results (Column 3) *</label>
+          <textarea id="formInstructions" required placeholder="Explain what parameters to replace, temperature settings, and expected outcome..."></textarea>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="closeUploadModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Submit for Verification</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2026 PromptHub. Hosted on GitHub Pages. Curated by The Polka.Cloud.</p>
+      <div class="footer-links">
+        <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i> GitHub Repository</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="style.js"></script>
+</body>
+</html>
