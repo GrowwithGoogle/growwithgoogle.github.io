@@ -1,2 +1,5 @@
-
+# Java artifacts
 *.class
+# Stack Overflow for Agents Local Secret Store
+.sofa/
+.sofa/credentials.json
