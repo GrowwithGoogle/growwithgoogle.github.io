@@ -1,0 +1,153 @@
+{
+  "timestamp": "2026-09-06T18:59:55.576527+00:00",
+  "repo_path": "C:\\Users\\Owner\\Documents\\antigravity\\valiant-newton\\risk-forecast",
+  "compliance_score_pct": 100.0,
+  "total_controls": 14,
+  "passed_controls": 14,
+  "failed_controls": 0,
+  "framework_stats": {
+    "EU_AI_ACT": {
+      "total": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    "NIST_AI_RMF": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "LEGAL_DATA_GOV": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  "controls": [
+    {
+      "framework": "EU_AI_ACT",
+      "control_id": "EU-AI-ART-09",
+      "title": "Continuous Risk Management System",
+      "article": "Article 9",
+      "requirement": "Establish, implement, document and maintain a continuous risk management system throughout the entire AI lifecycle.",
+      "status": "PASSED",
+      "remediation": null
+    },
+    {
+      "framework": "EU_AI_ACT",
+      "control_id": "EU-AI-ART-10",
+      "title": "Data Governance & Bias Mitigation",
+      "article": "Article 10",
+      "requirement": "Training, validation, and testing data sets shall be subject to appropriate data governance and management practices.",
+      "status": "PASSED",
+      "remediation": null
+    },
+    {
+      "framework": "EU_AI_ACT",
+      "control_id": "EU-AI-ART-11",
+      "title": "Technical Documentation & Architecture",
+      "article": "Article 11",
+      "requirement": "Draw up and keep up-to-date comprehensive technical documentation demonstrating compliance.",
+      "status": "PASSED",
+      "remediation": null
+    },
+    {
+      "framework": "EU_AI_ACT",
+      "control_id": "EU-AI-ART-12",
+      "title": "Automatic Event Logging & Traceability",
+      "article": "Article 12",
+      "requirement": "High-risk AI systems shall technically allow for the automatic recording of events ('logs') over lifetime.",
+      "status": "PASSED",
+      "remediation": null
+    },
+    {
+      "framework": "EU_AI_ACT",
+      "control_id": "EU-AI-ART-13",
+      "title": "Transparency & Provision of Information",
+      "article": "Article 13",
+      "requirement": "High-risk AI systems shall be designed to be sufficiently transparent for deployers to interpret outputs.",
+      "status": "PASSED",
+      "remediation": null
+    },
+    {
+      "framework": "EU_AI_ACT",
+      "control_id": "EU-AI-ART-14",
+      "title": "Human Oversight & Intervention (Human-in-the-Loop)",
+      "article": "Article 14",
+      "requirement": "Enable natural persons to oversee systems, prevent automation bias, and execute an override/stop.",
+      "status": "PASSED",
+      "remediation": null
+    },
+    {
+      "framework": "EU_AI_ACT",
+      "control_id": "EU-AI-ART-15",
+      "title": "Accuracy, Robustness & Cybersecurity",
+      "article": "Article 15",
+      "requirement": "Resilience against errors, faults, inconsistencies, data poisoning, and adversarial tampering.",
+      "status": "PASSED",
+      "remediation": null
+    },
+    {
+      "framework": "EU_AI_ACT",
+      "control_id": "EU-AI-ART-27",
+      "title": "Fundamental Rights Impact Assessment (FRIA)",
+      "article": "Article 27",
+      "requirement": "Perform assessment of the impact on fundamental rights before putting a high-risk AI system into service.",
+      "status": "PASSED",
+      "remediation": null
+    },
+    {
+      "framework": "NIST_AI_RMF",
+      "control_id": "NIST-GOVERN-1.1",
+      "title": "Legal & Regulatory Environmental Mapping",
+      "article": "GOVERN 1.1",
+      "requirement": "Legal and regulatory requirements involving AI are understood, managed, and integrated into workflows.",
+      "status": "PASSED",
+      "remediation": null
+    },
+    {
+      "framework": "NIST_AI_RMF",
+      "control_id": "NIST-MAP-1.1",
+      "title": "Context & Deployment Scope Definition",
+      "article": "MAP 1.1",
+      "requirement": "Intended purpose, deployment context, and business value propositions are explicitly mapped.",
+      "status": "PASSED",
+      "remediation": null
+    },
+    {
+      "framework": "NIST_AI_RMF",
+      "control_id": "NIST-MEASURE-1.1",
+      "title": "Quantitative Risk Metrics & Scoring",
+      "article": "MEASURE 1.1",
+      "requirement": "Approaches and metrics for measurement of AI risks are identified, tested, and tracked over time.",
+      "status": "PASSED",
+      "remediation": null
+    },
+    {
+      "framework": "NIST_AI_RMF",
+      "control_id": "NIST-MANAGE-1.1",
+      "title": "Risk Treatment & Pre-Engineered Mitigation",
+      "article": "MANAGE 1.1",
+      "requirement": "Risks are prioritized and acted upon based on planned risk treatments (avoid, transfer, mitigate, accept).",
+      "status": "PASSED",
+      "remediation": null
+    },
+    {
+      "framework": "LEGAL_DATA_GOV",
+      "control_id": "GDPR-ART-25",
+      "title": "Data Protection by Design & Default",
+      "article": "Article 25 GDPR",
+      "requirement": "Appropriate technical and organizational measures implemented to integrate safeguards into processing.",
+      "status": "PASSED",
+      "remediation": null
+    },
+    {
+      "framework": "LEGAL_DATA_GOV",
+      "control_id": "ISO-42001-AIMS",
+      "title": "AI Management System (AIMS) Accountability",
+      "article": "Clause 5 & 9",
+      "requirement": "Leadership commitment, internal audits, and continuous risk monitoring mechanisms.",
+      "status": "PASSED",
+      "remediation": null
+    }
+  ]
+}

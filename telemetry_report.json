@@ -1,0 +1,11 @@
+{
+  "net_drag_pct": 100.0,
+  "vehicle_hp": 25.0,
+  "cruising_speed_mph": 5.0,
+  "highway_state": "\ud83d\udfe3 DETOUR ARTERY ACTIVE (Bypass Route Live)",
+  "state_color": "\u001b[95m",
+  "active_detours": 1,
+  "total_risks_tracked": 9,
+  "active_hazards_count": 3,
+  "compliance_score": 100.0
+}

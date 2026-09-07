@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1400"
+  height="780"
+  viewBox="0 0 1400 780"
+  role="img"
+  aria-labelledby="title desc">
+
+  <title id="title">The Google Empire — Skyline with Flying Ferris Wheels &amp; Outer Space Switches</title>
+  <desc id="desc">
+    Metropolitan sci-fi risk landscape of the Google Empire featuring floating anti-gravity
+    ferris wheels for cyclic load-balancing and orbital outer space switches for photonic failover.
+  </desc>
+
+  <defs>
+    <!-- Brand Neon Gradients -->
+    <linearGradient id="gBlueSpire" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#3b82f6" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="gRedSpire" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#881337" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#ef4444" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#f87171" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="gYellowSpire" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#78350f" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#f59e0b" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="gGreenSpire" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#064e3b" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#10b981" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="gPurpleSpire" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#4c1d95" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#8b5cf6" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Space Laser Beams -->
+    <linearGradient id="spaceLaser" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#a855f7" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <linearGradient id="orbitalGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="laserGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+
+    @keyframes ferrisSpin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes orbitFloat {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(1deg); }
+    }
+    @keyframes laserPulse {
+      0%, 100% { opacity: 0.85; stroke-width: 2.5; }
+      50% { opacity: 0.4; stroke-width: 1.2; }
+    }
+    @keyframes beaconBlink {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+
+    .spin-wheel {
+      animation: ferrisSpin 24s linear infinite;
+      transform-origin: 470px 240px;
+    }
+    .spin-wheel-2 {
+      animation: ferrisSpin 18s linear infinite reverse;
+      transform-origin: 940px 210px;
+    }
+    .floating-switch {
+      animation: orbitFloat 5s ease-in-out infinite;
+    }
+    .laser-beam {
+      animation: laserPulse 1.8s ease-in-out infinite;
+    }
+    .beacon {
+      animation: beaconBlink 1.5s ease-in-out infinite;
+      transform-origin: center;
+    }
+  </style>
+
+  <!-- ================= TOP HEADER ================= -->
+  <g class="mono">
+    <text x="50" y="36" font-size="15" font-weight="900" fill="#38bdf8" letter-spacing="1">
+      THE GOOGLE EMPIRE // STRATOSPHERIC RISK METROPOLIS
+    </text>
+    <text x="50" y="52" font-size="10.5" font-weight="600" fill="#94a3b8">
+      FLYING FERRIS WHEELS (LOAD BALANCING) &#8226; OUTER SPACE PHOTONIC SWITCHES &#8226; [PT:AC] ANDY KIECKHEFER
+    </text>
+
+    <text x="1350" y="36" text-anchor="end" font-size="11.5" font-weight="800" fill="#10b981">
+      ORBITAL FAILOVER: ONLINE // 0ms LATENCY
+    </text>
+    <text x="1350" y="52" text-anchor="end" font-size="10" fill="#94a3b8">
+      EU AI ACT 2024/1689 &#8226; NIST AI RMF 1.0 &#8226; SPACE-AIR-GROUND MESH
+    </text>
+  </g>
+
+  <!-- ================= STARS & ORBITAL GRID (STRATOSPHERE) ================= -->
+  <g fill="#ffffff" opacity="0.6">
+    <circle cx="120" cy="70" r="1"/>
+    <circle cx="280" cy="90" r="1.5"/>
+    <circle cx="560" cy="65" r="1.2"/>
+    <circle cx="780" cy="85" r="1"/>
+    <circle cx="1020" cy="60" r="1.5"/>
+    <circle cx="1240" cy="75" r="1"/>
+    <circle cx="1350" cy="95" r="1.2"/>
+  </g>
+
+  <!-- ================= OUTER SPACE SWITCHES (LEVITATING ORBITAL RELAYS) ================= -->
+
+  <!-- SPACE SWITCH #1 (Alpha Uplink - Over Gemini & Cloud) -->
+  <g id="orbitalSwitchAlpha" class="floating-switch" transform="translate(680, 75)">
+    <!-- Photonic Core Hexagon -->
+    <polygon points="0,-16 16,-6 16,12 0,22 -16,12 -16,-6" fill="url(#orbitalGold)" stroke="#fef08a" stroke-width="2" filter="url(#neonGlow)"/>
+    <!-- Solar Panels Wings -->
+    <rect x="-52" y="-4" width="32" height="12" rx="2" fill="#1e3a8a" stroke="#60a5fa" stroke-width="1.2"/>
+    <rect x="20" y="-4" width="32" height="12" rx="2" fill="#1e3a8a" stroke="#60a5fa" stroke-width="1.2"/>
+    <!-- Antenna Needle -->
+    <line x1="0" y1="22" x2="0" y2="36" stroke="#f8fafc" stroke-width="2.5"/>
+    <circle cx="0" cy="38" r="3.5" fill="#f43f5e" class="beacon"/>
+    
+    <text class="mono" x="0" y="-22" text-anchor="middle" font-size="9" font-weight="800" fill="#fde047">
+      ORBITAL SWITCH &#945; // PHOTONIC CROSSBAR
+    </text>
+  </g>
+
+  <!-- SPACE SWITCH #2 (Beta Uplink - Over Android & YouTube) -->
+  <g id="orbitalSwitchBeta" class="floating-switch" transform="translate(1120, 65)">
+    <polygon points="0,-14 14,-5 14,10 0,18 -14,10 -14,-5" fill="url(#orbitalGold)" stroke="#fef08a" stroke-width="1.8" filter="url(#neonGlow)"/>
+    <rect x="-44" y="-3" width="26" height="10" rx="2" fill="#1e3a8a" stroke="#60a5fa" stroke-width="1"/>
+    <rect x="18" y="-3" width="26" height="10" rx="2" fill="#1e3a8a" stroke="#60a5fa" stroke-width="1"/>
+    <line x1="0" y1="18" x2="0" y2="30" stroke="#f8fafc" stroke-width="2"/>
+    <circle cx="0" cy="32" r="3" fill="#38bdf8" class="beacon"/>
+
+    <text class="mono" x="0" y="-18" text-anchor="middle" font-size="8.5" font-weight="800" fill="#38bdf8">
+      SPACE SWITCH &#946; // STARNET FAILOVER
+    </text>
+  </g>
+
+  <!-- SPACE LASER DOWNLINKS (PHOTONIC UPLINKS TO BUILDING SPIRES) -->
+  <g class="laser-beam" filter="url(#laserGlow)">
+    <!-- Switch Alpha to Gemini Apex Spire (Center) -->
+    <line x1="680" y1="113" x2="630" y2="210" stroke="url(#spaceLaser)" stroke-width="2.5"/>
+    <!-- Switch Alpha to Cloud Monolith -->
+    <line x1="680" y1="113" x2="395" y2="290" stroke="url(#spaceLaser)" stroke-width="2" stroke-dasharray="8,4"/>
+    <!-- Switch Beta to YouTube Broadcast Tower -->
+    <line x1="1120" y1="97" x2="1052" y2="260" stroke="url(#spaceLaser)" stroke-width="2.5"/>
+    <!-- Switch Beta to User Project Spire -->
+    <line x1="1120" y1="97" x2="1240" y2="380" stroke="url(#spaceLaser)" stroke-width="2" stroke-dasharray="6,3"/>
+  </g>
+
+  <!-- ================= FLYING FERRIS WHEEL #1 (ANTI-GRAVITY LOAD BALANCER) ================= -->
+  <!-- Levitating between Cloud Monolith and Gemini Apex Spire -->
+  <g id="flyingFerrisWheel1">
+    <!-- Anti-Gravity Repulsor Base / Tractor Beam Ring -->
+    <ellipse cx="470" cy="360" rx="55" ry="12" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="8,4" opacity="0.6"/>
+    <line x1="470" y1="240" x2="470" y2="360" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4"/>
+
+    <!-- Rotating Wheel Structure -->
+    <g class="spin-wheel">
+      <!-- Outer Rim -->
+      <circle cx="470" cy="240" r="75" fill="none" stroke="#38bdf8" stroke-width="2" filter="url(#neonGlow)"/>
+      <circle cx="470" cy="240" r="71" fill="none" stroke="#60a5fa" stroke-width="0.8"/>
+      <!-- Inner Hub -->
+      <circle cx="470" cy="240" r="16" fill="#1e3a8a" stroke="#38bdf8" stroke-width="2"/>
+      <circle cx="470" cy="240" r="6" fill="#38bdf8"/>
+
+      <!-- Spokes (12 Spokes) -->
+      <g stroke="rgba(255,255,255,0.4)" stroke-width="1.2">
+        <line x1="470" y1="165" x2="470" y2="315"/>
+        <line x1="395" y1="240" x2="545" y2="240"/>
+        <line x1="417" y1="187" x2="523" y2="293"/>
+        <line x1="417" y1="293" x2="523" y2="187"/>
+        <line x1="432" y1="175" x2="508" y2="305"/>
+        <line x1="508" y1="175" x2="432" y2="305"/>
+      </g>
+
+      <!-- 8 Levitating Gondola Pods (Google Colors Carrying Tasks) -->
+      <circle cx="470" cy="165" r="7" fill="#3b82f6" stroke="#ffffff" stroke-width="1.5"/>
+      <circle cx="523" cy="187" r="7" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"/>
+      <circle cx="545" cy="240" r="7" fill="#f59e0b" stroke="#ffffff" stroke-width="1.5"/>
+      <circle cx="523" cy="293" r="7" fill="#10b981" stroke="#ffffff" stroke-width="1.5"/>
+      <circle cx="470" cy="315" r="7" fill="#3b82f6" stroke="#ffffff" stroke-width="1.5"/>
+      <circle cx="417" cy="293" r="7" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"/>
+      <circle cx="395" cy="240" r="7" fill="#f59e0b" stroke="#ffffff" stroke-width="1.5"/>
+      <circle cx="417" cy="187" r="7" fill="#10b981" stroke="#ffffff" stroke-width="1.5"/>
+    </g>
+
+    <text class="mono" x="470" y="380" text-anchor="middle" font-size="9" font-weight="800" fill="#38bdf8">
+      FLYING FERRIS WHEEL // ROUND-ROBIN LOAD RING
+    </text>
+  </g>
+
+  <!-- ================= FLYING FERRIS WHEEL #2 (TASK SCHEDULER RING) ================= -->
+  <!-- Levitating between Search Spire and YouTube Tower -->
+  <g id="flyingFerrisWheel2">
+    <ellipse cx="940" cy="320" rx="45" ry="10" fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="6,4" opacity="0.6"/>
+
+    <g class="spin-wheel-2">
+      <circle cx="940" cy="210" r="62" fill="none" stroke="#f59e0b" stroke-width="2" filter="url(#neonGlow)"/>
+      <circle cx="940" cy="210" r="14" fill="#78350f" stroke="#fbbf24" stroke-width="1.8"/>
+      <circle cx="940" cy="210" r="5" fill="#fbbf24"/>
+
+      <!-- Spokes -->
+      <g stroke="rgba(255,255,255,0.4)" stroke-width="1">
+        <line x1="940" y1="148" x2="940" y2="272"/>
+        <line x1="878" y1="210" x2="1002" y2="210"/>
+        <line x1="896" y1="166" x2="984" y2="254"/>
+        <line x1="896" y1="254" x2="984" y2="166"/>
+      </g>
+
+      <!-- 6 Data Pods -->
+      <circle cx="940" cy="148" r="6" fill="#10b981" stroke="#ffffff" stroke-width="1.2"/>
+      <circle cx="994" cy="179" r="6" fill="#3b82f6" stroke="#ffffff" stroke-width="1.2"/>
+      <circle cx="994" cy="241" r="6" fill="#ef4444" stroke="#ffffff" stroke-width="1.2"/>
+      <circle cx="940" cy="272" r="6" fill="#f59e0b" stroke="#ffffff" stroke-width="1.2"/>
+      <circle cx="886" cy="241" r="6" fill="#8b5cf6" stroke="#ffffff" stroke-width="1.2"/>
+      <circle cx="886" cy="179" r="6" fill="#34d399" stroke="#ffffff" stroke-width="1.2"/>
+    </g>
+
+    <text class="mono" x="940" y="338" text-anchor="middle" font-size="8.5" font-weight="800" fill="#f59e0b">
+      ORBITAL TASK WHEEL // AGENTIC CAROUSEL
+    </text>
+  </g>
+
+  <!-- ================= THE BUILDINGS OF THE EMPIRE ================= -->
+
+  <!-- BUILDING 1: ANDROID CITADEL (GREEN) -->
+  <g id="bldgAndroid" transform="translate(130, 80)">
+    <polygon points="20,600 120,600 105,320 35,320" fill="url(#gGreenSpire)" stroke="#10b981" stroke-width="2"/>
+    <g stroke="rgba(255,255,255,0.2)" stroke-width="0.8">
+      <line x1="20" y1="600" x2="105" y2="320"/>
+      <line x1="120" y1="600" x2="35" y2="320"/>
+      <line x1="30" y1="460" x2="110" y2="460"/>
+    </g>
+    <line x1="70" y1="320" x2="70" y2="270" stroke="#34d399" stroke-width="2.5"/>
+    <circle cx="70" cy="268" r="4" fill="#10b981" class="beacon"/>
+    <g class="sans" transform="translate(70, 625)">
+      <text text-anchor="middle" font-size="11" font-weight="900" fill="#10b981">ANDROID CITADEL</text>
+      <text text-anchor="middle" font-size="9" fill="#94a3b8" y="14">3B Endpoints &#8226; Zero-Trust OS</text>
+      <text text-anchor="middle" font-size="8.5" font-weight="700" fill="#34d399" y="26">HP: 98% &#8226; COMPLIANT</text>
+    </g>
+  </g>
+
+  <!-- BUILDING 2: CLOUD HYPERSCALE MONOLITH (BLUE) -->
+  <g id="bldgCloud" transform="translate(320, 80)">
+    <polygon points="20,600 130,600 120,240 30,240" fill="url(#gBlueSpire)" stroke="#3b82f6" stroke-width="2"/>
+    <g stroke="rgba(255,255,255,0.25)" stroke-width="1">
+      <line x1="25" y1="500" x2="125" y2="500"/>
+      <line x1="28" y1="400" x2="122" y2="400"/>
+      <line x1="30" y1="300" x2="120" y2="300"/>
+    </g>
+    <line x1="75" y1="240" x2="75" y2="190" stroke="#60a5fa" stroke-width="3"/>
+    <circle cx="75" cy="188" r="4.5" fill="#3b82f6" class="beacon"/>
+    <g class="sans" transform="translate(75, 625)">
+      <text text-anchor="middle" font-size="11" font-weight="900" fill="#3b82f6">CLOUD MONOLITH</text>
+      <text text-anchor="middle" font-size="9" fill="#94a3b8" y="14">Global Mesh &#8226; Space Laser Uplink</text>
+      <text text-anchor="middle" font-size="8.5" font-weight="700" fill="#60a5fa" y="26">HP: 100% &#8226; COMPLIANT</text>
+    </g>
+  </g>
+
+  <!-- BUILDING 3: DEEPMIND & GEMINI APEX OBSERVATORY (CENTER 828m, PURPLE) -->
+  <g id="bldgDeepMind" transform="translate(530, 80)">
+    <rect x="20" y="600" width="160" height="15" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="1"/>
+    <polygon points="30,600 170,600 145,160 55,160" fill="url(#gPurpleSpire)" stroke="#8b5cf6" stroke-width="2.5" filter="url(#neonGlow)"/>
+    <g stroke="#ffffff" stroke-width="0.8" opacity="0.4">
+      <line x1="35" y1="500" x2="165" y2="500"/>
+      <line x1="42" y1="400" x2="158" y2="400"/>
+      <line x1="50" y1="280" x2="150" y2="280"/>
+    </g>
+    <!-- Tuned Mass Damper -->
+    <circle cx="100" cy="220" r="14" fill="#fbbf24" stroke="#fef08a" stroke-width="1.5" filter="url(#neonGlow)"/>
+    <!-- Spire Needle -->
+    <line x1="100" y1="160" x2="100" y2="90" stroke="#f8fafc" stroke-width="3.5"/>
+    <circle cx="100" cy="88" r="6" fill="#f43f5e" class="beacon"/>
+    <g class="sans" transform="translate(100, 625)">
+      <text text-anchor="middle" font-size="12" font-weight="900" fill="#a855f7">GEMINI APEX SPIRE</text>
+      <text text-anchor="middle" font-size="9.5" fill="#94a3b8" y="14">Frontier AI &#8226; Photonic Uplink</text>
+      <text text-anchor="middle" font-size="9" font-weight="700" fill="#a855f7" y="26">HP: 100% &#8226; EU AI ACT CERTIFIED</text>
+    </g>
+  </g>
+
+  <!-- BUILDING 4: SEARCH & KNOWLEDGE SPIRE (GOLD) -->
+  <g id="bldgSearch" transform="translate(760, 80)">
+    <polygon points="20,600 140,600 125,240 35,240" fill="url(#gYellowSpire)" stroke="#f59e0b" stroke-width="2"/>
+    <g stroke="rgba(255,255,255,0.25)" stroke-width="1">
+      <line x1="25" y1="510" x2="135" y2="510"/>
+      <line x1="30" y1="410" x2="130" y2="410"/>
+      <line x1="33" y1="310" x2="127" y2="310"/>
+    </g>
+    <line x1="80" y1="240" x2="80" y2="180" stroke="#fde047" stroke-width="3"/>
+    <circle cx="80" cy="178" r="4" fill="#f59e0b" class="beacon"/>
+    <g class="sans" transform="translate(80, 625)">
+      <text text-anchor="middle" font-size="11" font-weight="900" fill="#f59e0b">SEARCH &amp; KNOWLEDGE</text>
+      <text text-anchor="middle" font-size="9" fill="#94a3b8" y="14">Trillion-Doc Index &#8226; WAF Core</text>
+      <text text-anchor="middle" font-size="8.5" font-weight="700" fill="#fde047" y="26">HP: 96% &#8226; COMPLIANT</text>
+    </g>
+  </g>
+
+  <!-- BUILDING 5: YOUTUBE BROADCAST TOWER (RED) -->
+  <g id="bldgYouTube" transform="translate(980, 80)">
+    <polygon points="20,600 125,600 112,210 32,210" fill="url(#gRedSpire)" stroke="#ef4444" stroke-width="2"/>
+    <g stroke="rgba(255,255,255,0.25)" stroke-width="1">
+      <line x1="24" y1="490" x2="121" y2="490"/>
+      <line x1="28" y1="380" x2="117" y2="380"/>
+      <line x1="31" y1="280" x2="114" y2="280"/>
+    </g>
+    <line x1="72" y1="210" x2="72" y2="140" stroke="#f87171" stroke-width="3"/>
+    <circle cx="72" cy="138" r="5" fill="#ef4444" class="beacon"/>
+    <g class="sans" transform="translate(72, 625)">
+      <text text-anchor="middle" font-size="11" font-weight="900" fill="#ef4444">YOUTUBE TOWER</text>
+      <text text-anchor="middle" font-size="9" fill="#94a3b8" y="14">PB/s Streams &#8226; StarNet Uplink</text>
+      <text text-anchor="middle" font-size="8.5" font-weight="700" fill="#f87171" y="26">HP: 94% &#8226; COMPLIANT</text>
+    </g>
+  </g>
+
+  <!-- BUILDING 6: NEW USER PROJECT SPIRE (CYAN // CLIMBING) -->
+  <g id="bldgUserProject" transform="translate(1180, 80)">
+    <polygon points="15,600 105,600 90,320 30,320" fill="url(#gBlueSpire)" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="4,2"/>
+    <!-- Construction Crane -->
+    <g stroke="#f59e0b" stroke-width="2">
+      <line x1="60" y1="320" x2="60" y2="280"/>
+      <line x1="60" y1="280" x2="95" y2="280"/>
+      <line x1="60" y1="280" x2="35" y2="280"/>
+    </g>
+    <circle cx="60" cy="278" r="3.5" fill="#38bdf8" class="beacon"/>
+    <g class="sans" transform="translate(60, 625)">
+      <text text-anchor="middle" font-size="11" font-weight="900" fill="#38bdf8">+ USER RISK-FORECAST</text>
+      <text text-anchor="middle" font-size="9" fill="#94a3b8" y="14">New Vessel in Skyline</text>
+      <text text-anchor="middle" font-size="8.5" font-weight="700" fill="#38bdf8" y="26">BUILDING CLIMBING</text>
+    </g>
+  </g>
+
+  <!-- ================= BEDROCK CONDUIT PLAZA ================= -->
+  <g transform="translate(0, 680)">
+    <rect x="0" y="0" width="1400" height="12" fill="#0f172a"/>
+    <line x1="0" y1="0" x2="1400" y2="0" stroke="#334155" stroke-width="2"/>
+    <!-- Shared Chilled Water & Data Fiber Conduits -->
+    <line x1="60" y1="6" x2="1340" y2="6" stroke="#0ea5e9" stroke-width="3" stroke-dasharray="14,6"/>
+  </g>
+
+  <!-- Footer Coordinates -->
+  <g class="mono" font-size="9.5" fill="#64748b" text-anchor="middle">
+    <text x="700" y="765">
+      GOOGLE EMPIRE METROPOLIS // FLYING FERRIS WHEEL LOAD BALANCERS &#8226; ORBITAL PHOTONIC CROSSBARS &#8226; 15 U.S.C. &#167; 3724
+    </text>
+  </g>
+</svg>
