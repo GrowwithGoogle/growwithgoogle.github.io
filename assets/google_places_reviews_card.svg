@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 370" width="100%" height="370">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161B22"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A73E8"/>
+      <stop offset="100%" stop-color="#1557B0"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-3%" y="-3%" width="106%" height="108%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 23px; font-weight: 700; fill: #FFFFFF; }
+    .sub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 13px; fill: #8B949E; }
+    .header-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; fill: #E6EDF3; }
+    .rating-big { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 44px; font-weight: 900; fill: #FBBC04; }
+    .stars { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 22px; fill: #FBBC04; letter-spacing: 2px; }
+    .rev-count { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 600; fill: #58A6FF; }
+    .rank-tag { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 700; fill: #3FB950; }
+    .quote-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12.5px; fill: #C9D1D9; }
+    .quote-author { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #8B949E; }
+    .btn-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12.5px; font-weight: 600; fill: #FFFFFF; }
+    .telemetry { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 10px; fill: #6E7681; }
+  </style>
+
+  <!-- Outer Card Container -->
+  <rect x="10" y="10" width="840" height="350" rx="16" fill="url(#cardGrad)" stroke="#30363D" stroke-width="1.5" filter="url(#cardShadow)"/>
+
+  <!-- Top Header Bar -->
+  <path d="M 10 26 C 10 17.16 17.16 10 26 10 L 834 10 C 842.84 10 850 17.16 850 26 L 850 50 L 10 50 Z" fill="#161B22"/>
+  <line x1="10" y1="50" x2="850" y2="50" stroke="#21262D" stroke-width="1.5"/>
+
+  <!-- Google 4-Color Brand Dots -->
+  <circle cx="32" cy="30" r="5" fill="#EA4335"/>
+  <circle cx="46" cy="30" r="5" fill="#FBBC04"/>
+  <circle cx="60" cy="30" r="5" fill="#34A853"/>
+  <circle cx="74" cy="30" r="5" fill="#4285F4"/>
+
+  <text x="96" y="34" class="header-label">GOOGLE MAPS VERIFIED PLACES FEED</text>
+
+  <!-- Live Pulsing Indicator -->
+  <g transform="translate(715, 30)">
+    <circle cx="0" cy="0" r="8" fill="#238636" opacity="0.4">
+      <animate attributeName="r" values="4;10;4" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.1;0.7" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="4.5" fill="#3FB950"/>
+    <text x="14" y="4" class="rank-tag">LIVE STREAM</text>
+  </g>
+
+  <!-- Main Hero Block -->
+  <g transform="translate(32, 70)">
+    <!-- Google Maps Pin Icon -->
+    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#EA4335" transform="translate(0, 2) scale(1.15)"/>
+    <text x="32" y="20" class="title">New Glarus Brewing Company</text>
+    <text x="32" y="40" class="sub">2400 State Hwy 69, New Glarus, WI 53574 · Driftless Sanctuary</text>
+  </g>
+
+  <!-- Rating Badge Field -->
+  <g transform="translate(32, 130)">
+    <!-- Rating Card Box -->
+    <rect x="0" y="0" width="225" height="86" rx="10" fill="#21262D" stroke="#30363D" stroke-width="1"/>
+    <text x="16" y="52" class="rating-big">4.8</text>
+    <text x="86" y="32" class="stars">★★★★★</text>
+    <text x="86" y="52" class="rev-count">4,286 Reviews</text>
+    <text x="86" y="70" class="rank-tag">#1 RATED MIDWEST BREWERY</text>
+  </g>
+
+  <!-- Review Quote Card 1 -->
+  <g transform="translate(272, 130)">
+    <rect x="0" y="0" width="275" height="86" rx="10" fill="#1C2128" stroke="#30363D" stroke-width="1"/>
+    <text x="14" y="24" class="quote-text">"Hilltop Bavarian chalets look straight</text>
+    <text x="14" y="42" class="quote-text">out of the Alps. Savoring cold beer over</text>
+    <text x="14" y="60" class="quote-text">green hills is American craft at its peak."</text>
+    <text x="14" y="77" class="quote-author">— Local Guide (142 reviews) · ★★★★★</text>
+  </g>
+
+  <!-- Review Quote Card 2 -->
+  <g transform="translate(560, 130)">
+    <rect x="0" y="0" width="270" height="86" rx="10" fill="#1C2128" stroke="#30363D" stroke-width="1"/>
+    <text x="14" y="24" class="quote-text">"You cannot buy this outside Wisconsin.</text>
+    <text x="14" y="42" class="quote-text">Driving across state lines for a trunk of</text>
+    <text x="14" y="60" class="quote-text">Spotted Cow is an annual pilgrimage."</text>
+    <text x="14" y="77" class="quote-author">— Verified Visitor · ★★★★★</text>
+  </g>
+
+  <!-- Action CTA Buttons -->
+  <g transform="translate(32, 236)">
+    <!-- Google Maps Primary Button -->
+    <rect x="0" y="0" width="225" height="36" rx="8" fill="url(#btnGrad)"/>
+    <text x="112" y="23" text-anchor="middle" class="btn-text">📡 View Live on Google Maps ↗</text>
+
+    <!-- Route & Dispatch Button -->
+    <rect x="240" y="0" width="215" height="36" rx="8" fill="#21262D" stroke="#30363D" stroke-width="1"/>
+    <text x="347" y="23" text-anchor="middle" class="btn-text" fill="#58A6FF">🧭 Google Route &amp; Dispatch ↗</text>
+
+    <!-- Live Synced Badge -->
+    <rect x="470" y="0" width="360" height="36" rx="8" fill="#0D1117" stroke="#238636" stroke-width="1"/>
+    <circle cx="488" cy="18" r="4" fill="#3FB950"/>
+    <text x="500" y="22" class="sub" fill="#3FB950">Place ID: ChIJIZNVoLTUB4gRduNnHbttoJM · Auto-synced API</text>
+  </g>
+
+  <!-- Bottom Telemetry Strip -->
+  <line x1="32" y1="292" x2="828" y2="292" stroke="#21262D" stroke-width="1"/>
+  <g transform="translate(32, 316)">
+    <text x="0" y="0" class="telemetry">FEED PROTOCOL: GOOGLE PLACES API (PLACE DETAILS v1) · POLLING: ACTIVE · STATUS: OPERATIONAL</text>
+    <text x="0" y="16" class="telemetry">LAT: 42.8016° N · LNG: -89.6322° W · JURISDICTION: GREEN COUNTY, WI · IN-STATE DISPATCH ONLY</text>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "label": "Google Reviews",
+  "message": "4.8 ★★★★★ (4,286)",
+  "color": "fbbc04",
+  "labelColor": "4285F4",
+  "style": "for-the-badge",
+  "place_id": "ChIJIZNVoLTUB4gRduNnHbttoJM",
+  "name": "New Glarus Brewing Co.",
+  "rating": 4.8,
+  "user_ratings_total": 4286,
+  "status": "OPERATIONAL",
+  "url": "https://www.google.com/maps/place/New+Glarus+Brewing+Co./@42.8016,-89.6322,17z/data=!4m8!3m7!1s0x8807d4b4a1599321:0x93306dbb1c67e76!8m2!3d42.8016!4d-89.6322!9m1!1b1!16s%2Fm%2F050yq9",
+  "last_synced_utc": "2026-09-20T14:20:00Z"
+}
