@@ -3,1339 +3,430 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Gildan // Sovereign Production Vessel & Civil Risk-Forecast Simulator</title>
-  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <title>Grow with Google — The Model Farm & Pregame | Raw Ingredients Procurement</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.6)); }
-      50% { opacity: 1; filter: drop-shadow(0 0 18px rgba(129, 140, 248, 0.9)); }
+    :root {
+      --google-blue: #4285F4;
+      --google-red: #EA4335;
+      --google-yellow: #FBBC05;
+      --google-green: #34A853;
+      --gold: #f59e0b;
+      --cyber-cyan: #06b6d4;
     }
     .grid-bg {
-      background-size: 28px 28px;
+      background-size: 32px 32px;
       background-image: 
-        linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+        linear-gradient(to right, rgba(245, 158, 11, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(245, 158, 11, 0.04) 1px, transparent 1px);
     }
-    .hud-card {
-      background: rgba(13, 20, 36, 0.8);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      backdrop-filter: blur(14px);
+    .farm-card {
+      background: rgba(19, 27, 46, 0.85);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      backdrop-filter: blur(12px);
+      transition: all 0.25s ease;
+    }
+    .farm-card:hover {
+      border-color: rgba(245, 158, 11, 0.6);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5), 0 0 20px rgba(245, 158, 11, 0.15);
+    }
+    .transit-card-uber {
+      background: linear-gradient(135deg, #000000, #18181b);
+      border: 1px solid #3f3f46;
+    }
+    .transit-card-uber:hover {
+      border-color: #ffffff;
+      box-shadow: 0 10px 25px rgba(255,255,255,0.15);
+    }
+    .transit-card-lyft {
+      background: linear-gradient(135deg, #ff00bf, #800060);
+      border: 1px solid #ff4dc8;
+    }
+    .transit-card-lyft:hover {
+      box-shadow: 0 10px 25px rgba(255, 0, 191, 0.35);
     }
   </style>
 </head>
-<body class="bg-[#060913] text-slate-100 font-sans min-h-screen p-3 md:p-6 select-none overflow-x-hidden grid-bg">
+<body class="bg-[#090d16] text-slate-100 font-sans min-h-screen p-4 md:p-8 select-none overflow-x-hidden grid-bg">
 
-  <!-- ================= TOP GOOGLE GILDAN HEADER ================= -->
-  <header class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between border-b border-sky-900/40 pb-4 mb-4 gap-3">
+  <!-- ================= TOP HEADER & BRAND BAR ================= -->
+  <header class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between border-b border-amber-500/20 pb-6 mb-8 gap-4">
     <div>
-      <div class="flex items-center gap-2">
-        <span class="px-2 py-0.5 text-[10px] font-mono font-black bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded">
-          GOOGLE GILDAN · POWERED BY RISK-FORECAST
-        </span>
-        <span class="text-[10px] font-mono text-emerald-400 flex items-center gap-1">
+      <div class="flex flex-wrap items-center gap-2 mb-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 rounded-full">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-          CARGO INTEGRITY: 100% INTACT
+          GROW WITH GOOGLE · THE MODEL FARM
         </span>
-        <span class="text-[10px] font-mono text-cyan-300">
-          ARCHITECT: [PT:AC] ANDY KIECKHEFER
+        <span class="px-2.5 py-0.5 text-xs font-mono bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-full">
+          THE PREGAME EXPERIENCE
+        </span>
+        <span class="px-2.5 py-0.5 text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full">
+          1516 REINHEITSGEBOT SOVEREIGNTY
         </span>
       </div>
-      <h1 class="text-xl md:text-2xl font-black tracking-tight mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-sky-300 to-indigo-300">
-        Google Gildan // Sovereign Production Vessel
+      <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500">
+        The Model Farm & Agronomic Pregame
       </h1>
-      <p class="text-[11px] text-slate-400 font-mono">
-        "The heavyweight staple foundation powered by Risk-Forecast: civil inspection (scaffolding, windows, lifts, stairs) across rural farmland and urban metropolis."
+      <p class="text-sm text-slate-400 max-w-2xl mt-1">
+        Growing, harvesting, and procuring the four elemental building blocks of honest beer: <strong>Barley</strong>, <strong>Hops</strong>, <strong>Water</strong>, and <strong>Yeast</strong>. The true craft begins in the soil before the kettle ever boils.
       </p>
     </div>
 
-    <!-- Real-time Vessel & Cargo Telemetry -->
-    <div class="flex items-center gap-3 bg-slate-900/90 border border-sky-900/60 px-3 py-1.5 rounded-xl text-xs font-mono shadow-xl shadow-sky-950/50">
+    <!-- Live Farm Agronomy & Weather HUD -->
+    <div class="flex items-center gap-3 bg-slate-900/90 border border-amber-500/30 px-4 py-2 rounded-xl text-xs font-mono shadow-xl shadow-amber-950/20">
       <div>
-        <div class="text-slate-400 text-[9px]">GILDAN / SPRINT</div>
-        <div class="text-sky-400 font-bold" id="hudDay">Day 001 / 365</div>
+        <div class="text-slate-400 text-[10px]">SOIL MOISTURE</div>
+        <div class="text-emerald-400 font-bold" id="hudMoisture">24.2% (OPTIMAL)</div>
       </div>
       <div class="w-px h-6 bg-slate-800"></div>
       <div>
-        <div class="text-slate-400 text-[9px]">HULL HEALTH (HP)</div>
-        <div class="text-emerald-400 font-bold" id="hudHp">100.0%</div>
+        <div class="text-slate-400 text-[10px]">SOLAR FLUX</div>
+        <div class="text-amber-400 font-bold" id="hudSolar">782 W/m²</div>
       </div>
       <div class="w-px h-6 bg-slate-800"></div>
       <div>
-        <div class="text-slate-400 text-[9px]">CARGO SECURITY</div>
-        <div class="text-emerald-300 font-bold" id="hudCargo">ZERO LEAKAGE</div>
+        <div class="text-slate-400 text-[10px]">AQUIFER FLOW</div>
+        <div class="text-cyan-400 font-bold" id="hudAquifer">18.4 GPM</div>
       </div>
-      <div class="w-px h-6 bg-slate-800"></div>
-      <div>
-        <div class="text-slate-400 text-[9px]">WEATHER RISK</div>
-        <div class="text-amber-400 font-bold" id="hudClimate">CALM ATMOSPHERE</div>
-      </div>
-      <div class="w-px h-6 bg-slate-800"></div>
-      <div>
-        <div class="text-slate-400 text-[9px]">LEGAL ARMOR</div>
-        <div class="text-cyan-300 font-bold">EU AI ACT [✔]</div>
-      </div>
-      <div class="w-px h-6 bg-slate-800"></div>
-      <button id="btnOpenLeaderboard" class="px-2.5 py-1.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 rounded-lg text-[10px] font-bold transition flex items-center gap-1 shadow-md hover:scale-105 active:scale-95 cursor-pointer">
-        <span>🏆</span> LEADERBOARD
-      </button>
     </div>
   </header>
 
-  <!-- ================= GILDAN TOOLBAR: CIVIL GAUGES & LANDSCAPE ZONING ================= -->
-  <div class="max-w-7xl mx-auto mb-4 grid grid-cols-1 md:grid-cols-12 gap-3 font-mono text-xs">
-    <!-- Left: 4 Civil Inspection Gauges (7 cols) -->
-    <div class="md:col-span-7 bg-slate-900/80 border border-slate-800 rounded-xl p-2.5 flex items-center justify-between gap-2 shadow-lg">
-      <span class="text-[10px] text-slate-400 font-bold">CIVIL GAUGES:</span>
-      <div class="flex items-center gap-1.5 bg-slate-950 px-2 py-1 rounded border border-slate-800">
-        <span class="text-[10px] text-slate-400">🪜 SCAFFOLD</span>
-        <span class="text-emerald-400 font-bold" id="gaugeScaffolding">94.0%</span>
-      </div>
-      <div class="flex items-center gap-1.5 bg-slate-950 px-2 py-1 rounded border border-slate-800">
-        <span class="text-[10px] text-slate-400">🪟 WINDOWS</span>
-        <span class="text-cyan-400 font-bold" id="gaugeWindows">92.5%</span>
-      </div>
-      <div class="flex items-center gap-1.5 bg-slate-950 px-2 py-1 rounded border border-slate-800">
-        <span class="text-[10px] text-slate-400">🛗 LIFTS</span>
-        <span class="text-amber-400 font-bold" id="gaugeLifts">96.0%</span>
-      </div>
-      <div class="flex items-center gap-1.5 bg-slate-950 px-2 py-1 rounded border border-slate-800">
-        <span class="text-[10px] text-slate-400">🪜 STAIRS</span>
-        <span class="text-purple-400 font-bold" id="gaugeStairs">98.4%</span>
-      </div>
-    </div>
+  <main class="max-w-7xl mx-auto flex flex-col gap-10">
 
-    <!-- Right: Landscape Zoning Switcher (5 cols) -->
-    <div class="md:col-span-5 bg-slate-900/80 border border-slate-800 rounded-xl p-1.5 flex items-center justify-between gap-1 shadow-lg">
-      <button id="btnZoneFarmland" class="flex-1 py-1.5 px-2 rounded-lg text-slate-300 hover:text-emerald-300 hover:bg-emerald-950/40 text-[10px] font-bold transition flex items-center justify-center gap-1">
-        <span>🌾</span> FARMLAND
-      </button>
-      <button id="btnZoneSuburban" class="flex-1 py-1.5 px-2 rounded-lg text-slate-300 hover:text-amber-300 hover:bg-amber-950/40 text-[10px] font-bold transition flex items-center justify-center gap-1">
-        <span>🏡</span> SUBURBAN
-      </button>
-      <button id="btnZoneMetropolis" class="flex-1 py-1.5 px-2 rounded-lg bg-sky-500/20 text-sky-300 border border-sky-500/40 text-[10px] font-bold transition flex items-center justify-center gap-1 shadow-sm">
-        <span>🏙️</span> METROPOLIS
-      </button>
-    </div>
-  </div>
-
-  <!-- ================= MAIN SIMULATOR WORKSPACE ================= -->
-  <main class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-5">
-
-    <!-- LEFT: 3D CYBER-SKYSCRAPER CANVAS & RISK WEATHER (7 COLS) -->
-    <div class="lg:col-span-7 flex flex-col hud-card rounded-2xl p-4 relative overflow-hidden shadow-2xl">
-      
-      <!-- Live Production Weather Ingress Banner -->
-      <div class="absolute top-6 left-6 z-10 pointer-events-none flex flex-col gap-2 max-w-md">
-        <div class="inline-flex items-center gap-2.5 bg-black/85 border border-slate-700/80 px-3 py-1.5 rounded-lg backdrop-blur text-xs font-mono">
-          <span class="text-base" id="weatherIcon">☀️</span>
-          <div>
-            <div class="text-slate-200 font-bold flex items-center gap-2">
-              <span id="weatherMetaphorTitle">Fair Skies // Stable Runway</span>
-              <span class="text-[9px] px-1.5 py-0.2 bg-emerald-950 text-emerald-400 border border-emerald-800 rounded" id="riskBadge">LOW VOLATILITY</span>
-            </div>
-            <div class="text-[10px] text-slate-400" id="weatherIncidentDesc">Zero regulatory injunctions · Ingress stable at 450 req/s · Clean CI passes</div>
-          </div>
+    <!-- ================= SECTION 1: THE 4 MODEL FARM QUADRANTS ================= -->
+    <section>
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 class="text-xl font-bold text-slate-100 flex items-center gap-2">
+            <span class="text-amber-400">🌱</span> The Four Farm Quadrants (Raw Ingredients Procurement)
+          </h2>
+          <p class="text-xs text-slate-400">Each crop is cultivated to statutory 1516 purity specifications under continuous agronomic telemetry.</p>
         </div>
-
-        <div id="crisisPill" class="hidden inline-flex items-center gap-2 bg-rose-950/90 border border-rose-500 text-rose-200 px-3 py-1.5 rounded-lg text-xs font-mono shadow-lg shadow-rose-950/60 animate-pulse">
-          <span class="text-base">🚨</span>
-          <span id="crisisMsg">CRITICAL PRODUCTION WEATHER: Flash Legal Injunction Issued!</span>
-        </div>
-      </div>
-
-      <!-- Canvas Viewport -->
-      <div class="relative w-full h-[540px] rounded-xl overflow-hidden bg-gradient-to-b from-[#04060d] via-[#080d1a] to-[#0f172a] border border-sky-950 flex items-center justify-center">
-        <canvas id="spireCanvas" width="700" height="540" class="w-full h-full block cursor-crosshair"></canvas>
-      </div>
-
-      <!-- Scrubber & Production Climate Controls -->
-      <div class="mt-3 pt-3 border-t border-slate-800 flex flex-col gap-2.5">
-        <div class="flex items-center justify-between text-xs font-mono">
-          <span class="text-slate-400">BUILD PHASE: <strong class="text-sky-400" id="phaseLabel">Stage 0: Bedrock Cryptographic Caissons</strong></span>
-          <span class="text-slate-400">SPIRE ELEVATION: <strong class="text-purple-400" id="towerHeight">2.3m / 163 Floors</strong></span>
-        </div>
-
-        <!-- Slider -->
-        <input 
-          type="range" 
-          id="daySlider" 
-          min="1" 
-          max="365" 
-          value="1" 
-          class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-sky-400"
-        />
-
-        <!-- Hazard Ingress Injectors: Real-world Production Weather -->
-        <div class="flex flex-col gap-2 pt-1">
-          <div class="text-[10px] font-mono text-slate-400 flex items-center justify-between">
-            <span>INJECT PRODUCTION RISK WEATHER (METAPHOR BUTTONS):</span>
-            <span class="text-sky-400 font-bold">CLICK TO TEST ARCHITECTURAL INTEGRITY</span>
-          </div>
-
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-            <!-- Risk 1: Legal Injunction Drop (Polar Vortex) -->
-            <button 
-              id="btnLegalStorm" 
-              class="px-2.5 py-2 bg-indigo-950/60 hover:bg-indigo-900/80 text-indigo-300 border border-indigo-700/60 rounded-lg text-xs font-mono transition text-left flex flex-col">
-              <span class="font-bold flex items-center gap-1">❄️ NEW LAW / FREEZE</span>
-              <span class="text-[9px] text-indigo-400">EU AI Act Injunction</span>
-            </button>
-
-            <!-- Risk 2: Data Breach / Leak (Lightning Strike) -->
-            <button 
-              id="btnDataBreach" 
-              class="px-2.5 py-2 bg-rose-950/60 hover:bg-rose-900/80 text-rose-300 border border-rose-700/60 rounded-lg text-xs font-mono transition text-left flex flex-col">
-              <span class="font-bold flex items-center gap-1">⚡ DATA BREACH</span>
-              <span class="text-[9px] text-rose-400">Key Exfiltration Attempt</span>
-            </button>
-
-            <!-- Risk 3: Tech Paradigm Shift / Sunset (Gale Wind Shear) -->
-            <button 
-              id="btnTechShift" 
-              class="px-2.5 py-2 bg-amber-950/60 hover:bg-amber-900/80 text-amber-300 border border-amber-700/60 rounded-lg text-xs font-mono transition text-left flex flex-col">
-              <span class="font-bold flex items-center gap-1">🌪️ API DEPRECATION</span>
-              <span class="text-[9px] text-amber-400">Vendor Breaks Contracts</span>
-            </button>
-
-            <!-- Risk 4: Viral Traffic / Saturation (Heat Dome) -->
-            <button 
-              id="btnTrafficSurge" 
-              class="px-2.5 py-2 bg-orange-950/60 hover:bg-orange-900/80 text-orange-300 border border-orange-700/60 rounded-lg text-xs font-mono transition text-left flex flex-col">
-              <span class="font-bold flex items-center gap-1">🔥 10x INGRESS SURGE</span>
-              <span class="text-[9px] text-orange-400">Compute Thermal Spike</span>
-            </button>
-          </div>
-
-          <!-- FORTRESS DOCTRINE: WARFARE & BREACH SIMULATION -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-1">
-            <button 
-              id="btnActOfWar" 
-              class="px-2.5 py-2 bg-purple-950/60 hover:bg-purple-900/80 text-purple-300 border border-purple-700/60 rounded-lg text-xs font-mono transition text-left flex items-center justify-between">
-              <div>
-                <div class="font-bold flex items-center gap-1.5">⚔️ ACT OF WAR (PEN-TEST)</div>
-                <div class="text-[9px] text-purple-400">Red-Team Kinetic Cyber Siege</div>
-              </div>
-              <span class="text-[9px] px-1.5 py-0.5 bg-purple-900/80 text-purple-200 rounded border border-purple-500/40">OFFENSIVE</span>
-            </button>
-
-            <button 
-              id="btnWarSimulation" 
-              class="px-2.5 py-2 bg-fuchsia-950/60 hover:bg-fuchsia-900/80 text-fuchsia-300 border border-fuchsia-700/60 rounded-lg text-xs font-mono transition text-left flex items-center justify-between">
-              <div>
-                <div class="font-bold flex items-center gap-1.5">🛡️ WAR SIMULATION (BREACH)</div>
-                <div class="text-[9px] text-fuchsia-400">Progressive Collapse Rehearsal</div>
-              </div>
-              <span class="text-[9px] px-1.5 py-0.5 bg-fuchsia-900/80 text-fuchsia-200 rounded border border-fuchsia-500/40">WARGAME</span>
-            </button>
-          </div>
-
-          <!-- Bottom Actions: Build & Mitigate -->
-          <div class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-800/80 mt-1">
-            <div class="flex items-center gap-2">
-              <button 
-                id="btnPlay" 
-                class="px-4 py-2 bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-slate-950 font-black rounded-lg text-xs font-mono flex items-center gap-1.5 transition active:scale-95 shadow-md shadow-sky-500/25">
-                <span id="playIcon">▶</span>
-                <span id="playLabel">RUN 365-DAY BUILD</span>
-              </button>
-
-              <button 
-                id="btnDeployMitigation" 
-                class="px-3 py-2 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 rounded-lg text-xs font-mono transition flex items-center gap-1">
-                <span>🛡️</span> DEPLOY DETOUR &amp; PATCH
-              </button>
-            </div>
-
-            <div class="flex items-center gap-2">
-              <button 
-                id="btnAudio" 
-                class="px-2.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-400 rounded-lg text-xs font-mono transition">
-                🔊 AUDIO: OFF
-              </button>
-              <button 
-                id="btnReset" 
-                class="px-2.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-400 rounded-lg text-xs font-mono transition">
-                ↺ RESET
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- RIGHT: THE PRODUCTION WEATHER DICTIONARY & ARCHITECTURAL DEFENSES (5 COLS) -->
-    <div class="lg:col-span-5 flex flex-col gap-4">
-
-      <!-- GILDAN CARD 0: ANTICIPATED BUILDING HICCUPS RADAR -->
-      <div class="hud-card rounded-2xl p-4 shadow-xl border border-amber-500/30">
-        <div class="flex items-center justify-between mb-2 pb-2 border-b border-slate-800">
-          <h3 class="font-mono text-xs font-bold text-amber-300 flex items-center gap-1.5">
-            <span>📡</span> ANTICIPATED BUILDING HICCUPS
-          </h3>
-          <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40">
-            GILDAN RADAR
-          </span>
-        </div>
-        <p class="text-[11px] text-slate-400 font-mono mb-2.5">
-          "When the risk-forecast is tempered, we see building hiccups coming miles ahead and pre-engineer the mitigation before steel is hoisted."
-        </p>
-        <div class="space-y-1.5 text-xs font-mono" id="hiccupsContainer">
-          <div class="p-2 rounded-lg bg-slate-900/90 border border-slate-800 flex items-start justify-between">
-            <div>
-              <div class="text-slate-200 font-bold flex items-center gap-1.5">
-                <span class="text-amber-400">🪜 Scaffolding:</span> Lockfile Drift at Month 10
-              </div>
-              <div class="text-[10px] text-slate-400">Transitive dependency major bump breaks LTS build</div>
-            </div>
-            <span class="text-[9px] px-1.5 py-0.5 bg-emerald-950 text-emerald-400 border border-emerald-800 rounded">MITIGATED</span>
-          </div>
-
-          <div class="p-2 rounded-lg bg-slate-900/90 border border-slate-800 flex items-start justify-between">
-            <div>
-              <div class="text-slate-200 font-bold flex items-center gap-1.5">
-                <span class="text-cyan-400">🪟 Windows:</span> Upstream REST Sunset at Month 28
-              </div>
-              <div class="text-[10px] text-slate-400">Vendor drops v1 schema during peak Q3 traffic</div>
-            </div>
-            <span class="text-[9px] px-1.5 py-0.5 bg-purple-950 text-purple-300 border border-purple-800 rounded">DETOUR LIVE</span>
-          </div>
-
-          <div class="p-2 rounded-lg bg-slate-900/90 border border-slate-800 flex items-start justify-between">
-            <div>
-              <div class="text-slate-200 font-bold flex items-center gap-1.5">
-                <span class="text-amber-400">🛗 Lifts:</span> Concurrency Deadlock at Peak Hour
-              </div>
-              <div class="text-[10px] text-slate-400">Viral traffic spike saturating connection pool</div>
-            </div>
-            <span class="text-[9px] px-1.5 py-0.5 bg-amber-950 text-amber-300 border border-amber-800 rounded">BUFFERED</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD 1: THE METAPHOR TRANSLATOR (EVERYDAY PRODUCTION RISK AS WEATHER) -->
-      <div class="hud-card rounded-2xl p-4 shadow-xl">
-        <div class="flex items-center justify-between mb-3 border-b border-slate-800 pb-2">
-          <h3 class="font-mono text-xs font-bold text-sky-400 flex items-center gap-1.5">
-            <span>🌦️</span> PRODUCTION WEATHER LEXICON
-          </h3>
-          <span class="text-[10px] font-mono text-slate-400">SKYSCRAPER DEFENSE MAPPING</span>
-        </div>
-
-        <div class="space-y-2 text-xs font-mono">
-          <!-- Mapping 1: Crosswinds = Tech Shift & API Sunset -->
-          <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex items-start gap-2.5">
-            <span class="text-base text-amber-400">🌪️</span>
-            <div>
-              <div class="text-slate-200 font-bold flex items-center gap-2">
-                <span>Gale Crosswinds</span>
-                <span class="text-[9px] text-amber-400">↳ Disruptive Tech / API Sunset</span>
-              </div>
-              <p class="text-[10px] text-slate-400 mt-0.5">
-                <strong>Skyscraper Defense:</strong> Tuned Mass Damper (Level 88) sways out of phase. System deploys dual-ingestion adapter proxy bridge with zero downtime.
-              </p>
-            </div>
-          </div>
-
-          <!-- Mapping 2: Lightning = Zero-Day Exploit / Data Breach -->
-          <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex items-start gap-2.5">
-            <span class="text-base text-rose-400">⚡</span>
-            <div>
-              <div class="text-slate-200 font-bold flex items-center gap-2">
-                <span>Lightning Strikes</span>
-                <span class="text-[9px] text-rose-400">↳ Data Breach / Zero-Day Exploit</span>
-              </div>
-              <p class="text-[10px] text-slate-400 mt-0.5">
-                <strong>Skyscraper Defense:</strong> Faraday Cage grounding directly to Bedrock Caissons. Cryptographic HSM key isolation prevents root compromise.
-              </p>
-            </div>
-          </div>
-
-          <!-- Mapping 3: Polar Vortex = New Laws / Compliance Freezes -->
-          <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex items-start gap-2.5">
-            <span class="text-base text-indigo-400">❄️</span>
-            <div>
-              <div class="text-slate-200 font-bold flex items-center gap-2">
-                <span>Polar Freeze &amp; Ice</span>
-                <span class="text-[9px] text-indigo-400">↳ New Laws &amp; Governance Audits</span>
-              </div>
-              <p class="text-[10px] text-slate-400 mt-0.5">
-                <strong>Skyscraper Defense:</strong> Self-climbing heated concrete core. Automated EU AI Act and NIST AI RMF compliance sniffers prove continuous conformity.
-              </p>
-            </div>
-          </div>
-
-          <!-- Mapping 4: Heat Dome = Compute Saturation / Cost Overrun -->
-          <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex items-start gap-2.5">
-            <span class="text-base text-orange-400">🔥</span>
-            <div>
-              <div class="text-slate-200 font-bold flex items-center gap-2">
-                <span>Solar Heat Dome</span>
-                <span class="text-[9px] text-orange-400">↳ Concurrency Saturation &amp; Throttling</span>
-              </div>
-              <p class="text-[10px] text-slate-400 mt-0.5">
-                <strong>Skyscraper Defense:</strong> Aerodynamic Glass Curtain Wall with integrated solar shading fins. Serverless backoff and distributed Redis rate limiters.
-              </p>
-            </div>
-          </div>
-
-          <!-- Mapping 5: Acts of War = Penetration Testing -->
-          <div class="p-2.5 rounded-lg bg-purple-950/40 border border-purple-800/60 flex items-start gap-2.5">
-            <span class="text-base text-purple-400">⚔️</span>
-            <div>
-              <div class="text-purple-200 font-bold flex items-center gap-2">
-                <span>Acts of War</span>
-                <span class="text-[9px] text-purple-400">↳ Penetration Testing &amp; Red-Teaming</span>
-              </div>
-              <p class="text-[10px] text-slate-300 mt-0.5">
-                <strong>Vessel Defense:</strong> Intentional hostile siege testing. Blast-resistant laminated curtain wall (DoD UFC 4-010-01) and ZTNA biometric airlocks deflect malicious artillery.
-              </p>
-            </div>
-          </div>
-
-          <!-- Mapping 6: War Simulation = Risk Security Breaches -->
-          <div class="p-2.5 rounded-lg bg-fuchsia-950/40 border border-fuchsia-800/60 flex items-start gap-2.5">
-            <span class="text-base text-fuchsia-400">🛡️</span>
-            <div>
-              <div class="text-fuchsia-200 font-bold flex items-center gap-2">
-                <span>War Simulation</span>
-                <span class="text-[9px] text-fuchsia-400">↳ Security Breach &amp; Blast-Radius Wargaming</span>
-              </div>
-              <p class="text-[10px] text-slate-300 mt-0.5">
-                <strong>Vessel Defense:</strong> GSA Progressive Collapse rehearsal. Micro-segmented blast bulkheads slam shut; out-of-band space switch reroutes uncompromised cargo.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD 2: TUNED MASS DAMPER & RISK MITIGATION STATUS -->
-      <div class="hud-card rounded-2xl p-4 shadow-xl">
-        <div class="flex items-center justify-between mb-2">
-          <h3 class="font-mono text-xs font-bold text-slate-300 flex items-center gap-1.5">
-            <span>🟡</span> TUNED MASS DAMPER (CIRCUIT BREAKER)
-          </h3>
-          <span class="text-[9px] font-mono bg-amber-500/20 text-amber-400 border border-amber-500/30 px-1.5 py-0.5 rounded" id="tmdStatus">
-            LEVEL 88 // ARMED
-          </span>
-        </div>
-
-        <p class="text-[11px] text-slate-400 mb-3 font-mono">
-          Just as a 660-ton pendulum neutralizes 100-mph skyscraper sway, pre-engineered architectural detours absorb corporate and regulatory shocks.
-        </p>
-
-        <div class="space-y-3 text-[11px] font-mono">
-          <div>
-            <div class="flex justify-between text-slate-400 mb-1">
-              <span>ATMOSPHERIC FRICTION DRAG:</span>
-              <span id="txtDrag" class="text-sky-400 font-bold">12.4%</span>
-            </div>
-            <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-              <div id="barDrag" class="h-full bg-gradient-to-r from-emerald-400 via-amber-400 to-rose-500 transition-all duration-300" style="width: 12.4%;"></div>
-            </div>
-          </div>
-
-          <div>
-            <div class="flex justify-between text-slate-400 mb-1">
-              <span>TMD COUNTER-TORQUE (ABSORPTION):</span>
-              <span id="txtDamperForce" class="text-amber-400 font-bold">0 N·m (Standby)</span>
-            </div>
-            <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-              <div id="barDamper" class="h-full bg-amber-500 transition-all duration-300" style="width: 4%;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </main>
-
-  <!-- ================= GOOGLE GILDAN RISK-AVERSE LEADERBOARD MODAL ================= -->
-  <div id="modalLeaderboard" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-3 md:p-6">
-    <div class="hud-card max-w-4xl w-full rounded-2xl p-5 border border-amber-500/40 shadow-2xl shadow-amber-950/80 max-h-[90vh] flex flex-col">
-      <!-- Modal Header -->
-      <div class="flex items-center justify-between pb-3 border-b border-slate-800">
-        <div class="flex items-center gap-2.5">
-          <span class="text-2xl">🏆</span>
-          <div>
-            <h2 class="text-base md:text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 font-mono">
-              GOOGLE GILDAN // RISK-AVERSE GLOBAL LEADERBOARD
-            </h2>
-            <p class="text-[10px] md:text-[11px] text-slate-400 font-mono">
-              The Golf Principle of Infrastructure: <strong>Lowest Net Risk Drag Score (%) = Highest Tempering &amp; Rank</strong>
-            </p>
-          </div>
-        </div>
-        <button id="btnCloseLeaderboard" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 font-mono text-xs font-bold transition">
-          ✕ CLOSE
-        </button>
-      </div>
-
-      <!-- Zone Filter Pills -->
-      <div class="flex flex-wrap items-center justify-between gap-2 my-3 text-xs font-mono">
-        <div class="flex items-center gap-1.5">
-          <span class="text-slate-400 text-[10px]">FILTER:</span>
-          <button id="btnFilterAll" class="px-2.5 py-1 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-bold">ALL</button>
-          <button id="btnFilterFarmland" class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-400 hover:text-emerald-300 border border-slate-800 text-[10px] font-bold">🌾 FARMLAND</button>
-          <button id="btnFilterSuburban" class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-400 hover:text-amber-300 border border-slate-800 text-[10px] font-bold">🏡 SUBURBAN</button>
-          <button id="btnFilterMetropolis" class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-400 hover:text-sky-300 border border-slate-800 text-[10px] font-bold">🏙️ METROPOLIS</button>
-        </div>
-        <span class="text-[10px] text-emerald-400 font-mono flex items-center gap-1">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> 100% EU AI ACT &amp; NIST STAMPED
+        <span class="text-xs font-mono text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/20">
+          4 REPOSITORIES · 1 SOVEREIGN BREW
         </span>
       </div>
 
-      <!-- Leaderboard Table -->
-      <div class="overflow-y-auto flex-1 font-mono text-xs pr-1 border border-slate-800/80 rounded-xl bg-slate-950/60">
-        <table class="w-full text-left border-collapse">
-          <thead>
-            <tr class="text-[10px] text-slate-400 bg-slate-900/90 border-b border-slate-800 sticky top-0">
-              <th class="py-2.5 px-3">RANK</th>
-              <th class="py-2.5 px-3">PROJECT NAME</th>
-              <th class="py-2.5 px-3">ZONE</th>
-              <th class="py-2.5 px-3">CIVIL SCORE</th>
-              <th class="py-2.5 px-3 text-right">NET RISK SCORE</th>
-            </tr>
-          </thead>
-          <tbody id="leaderboardRows" class="divide-y divide-slate-800/60">
-            <!-- Populated via JS -->
-          </tbody>
-        </table>
-      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <!-- Modal Footer -->
-      <div class="pt-3 mt-3 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs font-mono">
-        <div class="text-slate-400 text-[10px]">
-          CLI Audit &amp; Submit: <code class="bg-slate-900 px-1.5 py-0.5 rounded text-sky-300 border border-slate-800">python scripts/adopt_project.py inspect . --submit "My-Project"</code>
+        <!-- Quadrant 1: Barley -->
+        <div class="farm-card p-5 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-3xl">🌾</span>
+              <a href="https://github.com/GrowwithGoogle/-barley" target="_blank" class="text-[11px] font-mono text-amber-400 hover:underline">
+                GrowwithGoogle/-barley ↗
+              </a>
+            </div>
+            <h3 class="text-lg font-bold text-amber-300">The Barley Fields & Kiln</h3>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">Two-Row Malting Barley (Hordeum vulgare)</p>
+            <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+              Planted in fertile glacial drift soil. Sprouted on malting floors to awaken $\alpha$-amylase and $\beta$-amylase diastatic enzymes, then kilned with warm air to create biscuit, caramel, and chocolate roasted malts.
+            </p>
+            <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
+              <div>Diastatic Power: <strong class="text-amber-400">140° Lintner</strong></div>
+              <div>Extract Potential: <strong class="text-emerald-400">82.5%</strong></div>
+              <div>Kiln Profile: <strong class="text-slate-200">Vienna / Pilsner Gold</strong></div>
+            </div>
+          </div>
+          <a href="https://github.com/GrowwithGoogle/-barley" target="_blank" class="mt-4 w-full text-center py-2 px-3 text-xs font-bold rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30 transition">
+            Inspect Grain Repository
+          </a>
         </div>
-        <button id="btnRankCurrentSim" class="px-3 py-1.5 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 rounded-lg text-[11px] font-bold transition flex items-center gap-1">
-          <span>⚡</span> RANK CURRENT SIMULATOR SESSION
-        </button>
+
+        <!-- Quadrant 2: Hops -->
+        <div class="farm-card p-5 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-3xl">🌿</span>
+              <a href="https://github.com/GrowwithGoogle/hops" target="_blank" class="text-[11px] font-mono text-emerald-400 hover:underline">
+                GrowwithGoogle/hops ↗
+              </a>
+            </div>
+            <h3 class="text-lg font-bold text-emerald-300">The Hop Yards & Trellis</h3>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">Noble Bines (Humulus lupulus)</p>
+            <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+              Climbing 18-foot high-wire trellises bathed in full sunlight. Golden lupulin glands burst with alpha acids for crisp bittering and delicate essential oils (myrcene, humulene) for floral and citrus aromatics.
+            </p>
+            <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
+              <div>Alpha Acid Rating: <strong class="text-emerald-400">4.5% - 12.8%</strong></div>
+              <div>Varieties: <strong class="text-slate-200">Hallertau · Saaz · Citra</strong></div>
+              <div>Harvest Curing: <strong class="text-amber-400">Solar Oast Dryers</strong></div>
+            </div>
+          </div>
+          <a href="https://github.com/GrowwithGoogle/hops" target="_blank" class="mt-4 w-full text-center py-2 px-3 text-xs font-bold rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30 transition">
+            Inspect Hop Repository
+          </a>
+        </div>
+
+        <!-- Quadrant 3: Water -->
+        <div class="farm-card p-5 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-3xl">💧</span>
+              <a href="https://github.com/GrowwithGoogle/hydrogen-dioxide" target="_blank" class="text-[11px] font-mono text-cyan-400 hover:underline">
+                GrowwithGoogle/hydrogen-dioxide ↗
+              </a>
+            </div>
+            <h3 class="text-lg font-bold text-cyan-300">The Artesian Aquifer</h3>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">Glacial Spring Water (H₂O)</p>
+            <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+              Filtered through ancient sandstone and limestone beds. Naturally balanced with calcium ions ($Ca^{2+}$) for yeast flocculation and minimal bicarbonate for mash pH optimization. 100% free of additives.
+            </p>
+            <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
+              <div>pH Level: <strong class="text-cyan-400">6.82 Neutral</strong></div>
+              <div>Mineral Profile: <strong class="text-slate-200">Pilsen Soft Baseline</strong></div>
+              <div>TDS Metric: <strong class="text-emerald-400">32 mg/L Pristine</strong></div>
+            </div>
+          </div>
+          <a href="https://github.com/GrowwithGoogle/hydrogen-dioxide" target="_blank" class="mt-4 w-full text-center py-2 px-3 text-xs font-bold rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 hover:bg-cyan-500/30 transition">
+            Inspect Water Repository
+          </a>
+        </div>
+
+        <!-- Quadrant 4: Yeast -->
+        <div class="farm-card p-5 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-3xl">🔬</span>
+              <a href="https://github.com/GrowwithGoogle/yeast" target="_blank" class="text-[11px] font-mono text-purple-400 hover:underline">
+                GrowwithGoogle/yeast ↗
+              </a>
+            </div>
+            <h3 class="text-lg font-bold text-purple-300">The Terroir Yeast Vault</h3>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">Microbial Fermentation (Saccharomyces)</p>
+            <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+              The invisible fourth element revealed by Louis Pasteur in 1857. Cryo-banked lager strains (*pastorianus*) for clean crisp attenuation and spontaneous wild farmhouse strains captured from local orchard breezes.
+            </p>
+            <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
+              <div>Viability Index: <strong class="text-purple-400">99.4% Active</strong></div>
+              <div>Pitch Target: <strong class="text-emerald-400">1.2M cells/mL/°P</strong></div>
+              <div>Ester Signature: <strong class="text-slate-200">Clean Malt / Spicy Phenol</strong></div>
+            </div>
+          </div>
+          <a href="https://github.com/GrowwithGoogle/yeast" target="_blank" class="mt-4 w-full text-center py-2 px-3 text-xs font-bold rounded-lg bg-purple-500/20 text-purple-300 border border-purple-500/40 hover:bg-purple-500/30 transition">
+            Inspect Yeast Repository
+          </a>
+        </div>
+
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- ================= SIMULATOR JAVASCRIPT ================= -->
+    <!-- ================= SECTION 2: THE PREGAME SENSORY LOUNGE & BREW SIMULATOR ================= -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+      <!-- Left 2 Cols: Interactive Farm-to-Brew Simulator -->
+      <div class="lg:col-span-2 farm-card p-6 rounded-2xl">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h3 class="text-lg font-bold text-amber-300 flex items-center gap-2">
+              <span>🌾➔🍺</span> The Pregame Harvest & Mash Simulator
+            </h3>
+            <p class="text-xs text-slate-400">Dial in your raw farm harvest to predict brew characteristics before the tap opens.</p>
+          </div>
+          <span class="px-2.5 py-1 text-xs font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded">
+            REINHEITSGEBOT VALIDATED
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+          <div>
+            <label class="block text-xs font-mono text-slate-300 mb-1">Malt Kiln Roast (Color): <span id="maltVal" class="text-amber-400 font-bold">Pilsner (3 SRM)</span></label>
+            <input type="range" min="1" max="4" value="1" id="maltRange" class="w-full accent-amber-500 cursor-pointer" oninput="updateHarvestSim()">
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono text-slate-300 mb-1">Noble Hop Bittering: <span id="hopVal" class="text-emerald-400 font-bold">36 IBU (Balanced)</span></label>
+            <input type="range" min="15" max="85" value="36" id="hopRange" class="w-full accent-emerald-500 cursor-pointer" oninput="updateHarvestSim()">
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono text-slate-300 mb-1">Aquifer Mineralization: <span id="waterVal" class="text-cyan-400 font-bold">Pilsen Soft</span></label>
+            <select id="waterSelect" class="w-full bg-slate-900 border border-slate-700 text-xs text-slate-200 rounded p-2" onchange="updateHarvestSim()">
+              <option value="soft">Pilsen Soft (Crisp & Clean)</option>
+              <option value="balanced">Driftless Limestone (Malty Balance)</option>
+              <option value="burton">Burton Hard (Hop Punch)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono text-slate-300 mb-1">Yeast Inoculation: <span id="yeastVal" class="text-purple-400 font-bold">German Lager (Cold 10°C)</span></label>
+            <select id="yeastSelect" class="w-full bg-slate-900 border border-slate-700 text-xs text-slate-200 rounded p-2" onchange="updateHarvestSim()">
+              <option value="lager">S. pastorianus (Lager, 10°C)</option>
+              <option value="ale">S. cerevisiae (Ale, 18°C)</option>
+              <option value="wild">Wild Driftless Terroir (Saison, 22°C)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mt-6 p-4 bg-slate-900/80 border border-amber-500/20 rounded-xl flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <div class="text-[10px] font-mono text-slate-400 uppercase">Predicted Pregame Concoction</div>
+            <div class="text-base font-extrabold text-amber-300" id="simResultName">PageRank Pilsner</div>
+            <div class="text-xs text-slate-300 mt-0.5" id="simResultDesc">Pale straw, crisp noble hop aroma, pristine lagering profile. Zero adjuncts.</div>
+          </div>
+          <a href="https://go.thepolka.cloud/taproom.html" target="_blank" class="px-4 py-2.5 bg-gradient-to-r from-amber-500 to-yellow-500 text-black font-extrabold text-xs uppercase rounded-lg hover:shadow-lg hover:shadow-amber-500/30 transition flex items-center gap-1.5">
+            <span>🍺</span> Brew This in Taproom Arcade ➔
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Col: BrewGene Intelligence Portal -->
+      <div class="farm-card p-6 rounded-2xl flex flex-col justify-between border-amber-500/30">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-2xl">🍺📊</span>
+            <span class="text-[10px] font-mono text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30">
+              BEER INTELLIGENCE
+            </span>
+          </div>
+          <h3 class="text-lg font-bold text-amber-300">BrewGene Gateway</h3>
+          <p class="text-xs text-slate-400 mt-1">Community ratings, flavor profiles & cellar logs.</p>
+          <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+            Ready to log tasting notes, analyze hop bitterness, or rate your session? Connect directly with <strong>BrewGene</strong>, the comprehensive craft beer database and rating platform.
+          </p>
+
+          <div class="mt-4 p-3 bg-slate-900/60 rounded-lg border border-slate-800 text-xs font-mono space-y-1.5">
+            <div class="text-slate-400">Database: <span class="text-amber-400">100,000+ Beers Tracked</span></div>
+            <div class="text-slate-400">Sync: <span class="text-emerald-400">Live Rating & Flavor Profile</span></div>
+            <div class="text-slate-400">Route: <span class="text-cyan-400">growwithgoogle.github.io/brewgene</span></div>
+          </div>
+        </div>
+
+        <div class="mt-6 flex flex-col gap-2">
+          <a href="brewgene.html" class="w-full text-center py-2.5 px-4 bg-gradient-to-r from-amber-500 to-yellow-600 text-black font-extrabold text-xs uppercase rounded-lg shadow-lg hover:shadow-amber-500/30 transition flex items-center justify-center gap-2">
+            <span>🍻</span> Open BrewGene Platform
+          </a>
+          <a href="https://www.brewgene.com" target="_blank" class="w-full text-center py-2 text-xs font-mono text-slate-400 hover:text-slate-200">
+            Visit brewgene.com ↗
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= SECTION 3: RIDE RESPONSIBLY (UBER & LYFT SAFE RIDE HOME) ================= -->
+    <section class="farm-card p-6 md:p-8 rounded-2xl border-emerald-500/30">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">🚗💨</span>
+            <h2 class="text-xl font-bold text-emerald-300">Pregame Responsibly: Safe Ride Home Hub</h2>
+          </div>
+          <p class="text-xs text-slate-300 mt-1">
+            Never drink and drive. Whether sampling fresh farm wort or enjoying a pint at the taproom, your designated ride is one tap away.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/30">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          ACTIVE RIDESHARE PICKUP ZONES AVAILABLE
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+        <!-- Uber Dispatch Card -->
+        <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location" target="_blank" class="transit-card-uber p-5 rounded-xl flex items-center justify-between text-left transition">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-black font-black text-lg tracking-tighter">
+              Uber
+            </div>
+            <div>
+              <div class="text-sm font-extrabold text-white flex items-center gap-1.5">
+                Ride with Uber
+                <span class="text-[10px] bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded">INSTANT PICKUP</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-0.5">Reliable rides from the Model Farm & Taproom.</p>
+              <div class="text-[11px] font-mono text-emerald-400 mt-1">Estimated Wait: 3-5 mins</div>
+            </div>
+          </div>
+          <span class="text-xl text-slate-400">➔</span>
+        </a>
+
+        <!-- Lyft Dispatch Card -->
+        <a href="https://lyft.com/ride?id=lyft" target="_blank" class="transit-card-lyft p-5 rounded-xl flex items-center justify-between text-left transition">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-[#ff00bf] font-black text-xl italic tracking-tighter">
+              lyft
+            </div>
+            <div>
+              <div class="text-sm font-extrabold text-white flex items-center gap-1.5">
+                Ride with Lyft
+                <span class="text-[10px] bg-black/40 text-pink-200 px-1.5 py-0.5 rounded">PREFERRED PARTNER</span>
+              </div>
+              <p class="text-xs text-pink-100 mt-0.5">Friendly drivers for your post-pregame commute.</p>
+              <div class="text-[11px] font-mono text-pink-200 mt-1">Safe Ride Guaranteed</div>
+            </div>
+          </div>
+          <span class="text-xl text-white">➔</span>
+        </a>
+
+      </div>
+
+      <div class="mt-4 pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between text-xs text-slate-400 gap-2 font-mono">
+        <div>📍 Farm Coordinates: <strong>42.81° N, 89.63° W (Wisconsin Driftless)</strong></div>
+        <div>💡 Designated Driver Pledge: <strong>Zero tolerance for impaired driving.</strong></div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: ECOSYSTEM FOOTER & SYNDICATION ================= -->
+    <footer class="border-t border-slate-800 pt-8 pb-12 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-400">
+      <div class="flex flex-col gap-1 text-center md:text-left">
+        <div class="flex items-center justify-center md:justify-start gap-2 font-mono text-slate-300">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>Grow with Google Sovereign Brewing Ecosystem</span>
+        </div>
+        <p class="text-slate-500">
+          Governed by the 1516 Bavarian Beer Purity Law & NIST SP 800-82 ICS Cyber Standards.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-4 items-center justify-center font-mono">
+        <a href="https://go.thepolka.cloud/taproom.html" class="hover:text-amber-400 transition">Taproom Arcade</a>
+        <span>·</span>
+        <a href="https://thepolka.cloud/brew_feed.xml" class="hover:text-amber-400 transition">RSS 2.0 Feed</a>
+        <span>·</span>
+        <a href="https://github.com/GrowwithGoogle/Reinheitsg-botTle" class="hover:text-amber-400 transition">Reinheitsg-botTle Repo</a>
+        <span>·</span>
+        <a href="brewgene.html" class="hover:text-amber-400 transition">BrewGene</a>
+      </div>
+    </footer>
+
+  </main>
+
   <script>
-    // Web Audio Synthesizer
-    let audioCtx = null;
-    let audioEnabled = false;
+    function updateHarvestSim() {
+      const malt = parseInt(document.getElementById('maltRange').value);
+      const hop = parseInt(document.getElementById('hopRange').value);
+      const water = document.getElementById('waterSelect').value;
+      const yeast = document.getElementById('yeastSelect').value;
 
-    function playTone(freq, type="sine", dur=0.15) {
-      if (!audioEnabled) return;
-      try {
-        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = type;
-        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-        gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + dur);
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start();
-        osc.stop(audioCtx.currentTime + dur);
-      } catch (e) {}
+      const maltLabels = ["Pilsner (3 SRM)", "Vienna (7 SRM)", "Munich Amber (14 SRM)", "Roasted Carafa (35 SRM)"];
+      document.getElementById('maltVal').innerText = maltLabels[malt - 1];
+      document.getElementById('hopVal').innerText = `${hop} IBU (${hop < 30 ? 'Mild' : hop < 60 ? 'Crisp' : 'Heavy Bitter'})`;
+
+      let name = "PageRank Pilsner";
+      let desc = "Crisp, golden, highly indexed. Zero latency quaffability.";
+
+      if (yeast === 'wild') {
+        name = "404: Yeast Not Found (Saison)";
+        desc = "Spontaneous driftless terroir funk, cracked pepper, dry effervescence.";
+      } else if (malt === 4) {
+        name = "Smackover Nitro Stout";
+        desc = "Deep, dark roasted malt enthalpy with viscous espresso crema.";
+      } else if (hop >= 55) {
+        name = "Kernel Panic Double IPA";
+        desc = "Aggressive noble hop assault designed to withstand memory leaks.";
+      } else if (malt === 2 || malt === 3) {
+        name = "Spotted Googler Farmhouse Ale";
+        desc = "Rich bready malt backbone with delicate noble floral finish.";
+      }
+
+      document.getElementById('simResultName').innerText = name;
+      document.getElementById('simResultDesc').innerText = desc;
     }
-
-    // State Variables
-    let currentDay = 1;
-    let isPlaying = false;
-    let timer = null;
-
-    // Metaphorical Production Weather Shocks
-    let legalFreeze = false;
-    let dataBreach = false;
-    let techShift = false;
-    let trafficSurge = false;
-    let actOfWar = false;
-    let warSimulation = false;
-
-    let hp = 100.0;
-    let damperAngle = 0.0;
-
-    // Canvas Setup
-    const canvas = document.getElementById("spireCanvas");
-    const ctx = canvas.getContext("2d");
-
-    // Atmospheric & Data particles
-    const weatherParticles = [];
-    for (let i = 0; i < 90; i++) {
-      weatherParticles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        len: Math.random() * 12 + 6,
-        speed: Math.random() * 5 + 4
-      });
-    }
-
-    // Data packets travelling up the core
-    const corePackets = [];
-    for (let i = 0; i < 16; i++) {
-      corePackets.push({
-        y: 490 - Math.random() * 400,
-        speed: Math.random() * 2 + 1.5
-      });
-    }
-
-    // DOM Elements
-    const hudDay = document.getElementById("hudDay");
-    const hudHp = document.getElementById("hudHp");
-    const hudClimate = document.getElementById("hudClimate");
-    const weatherIcon = document.getElementById("weatherIcon");
-    const weatherMetaphorTitle = document.getElementById("weatherMetaphorTitle");
-    const riskBadge = document.getElementById("riskBadge");
-    const weatherIncidentDesc = document.getElementById("weatherIncidentDesc");
-    const crisisPill = document.getElementById("crisisPill");
-    const crisisMsg = document.getElementById("crisisMsg");
-    const phaseLabel = document.getElementById("phaseLabel");
-    const towerHeight = document.getElementById("towerHeight");
-    const daySlider = document.getElementById("daySlider");
-    const btnPlay = document.getElementById("btnPlay");
-    const playIcon = document.getElementById("playIcon");
-    const playLabel = document.getElementById("playLabel");
-
-    const btnLegalStorm = document.getElementById("btnLegalStorm");
-    const btnDataBreach = document.getElementById("btnDataBreach");
-    const btnTechShift = document.getElementById("btnTechShift");
-    const btnTrafficSurge = document.getElementById("btnTrafficSurge");
-    const btnActOfWar = document.getElementById("btnActOfWar");
-    const btnWarSimulation = document.getElementById("btnWarSimulation");
-    const btnDeployMitigation = document.getElementById("btnDeployMitigation");
-    const btnAudio = document.getElementById("btnAudio");
-    const btnReset = document.getElementById("btnReset");
-
-    // Landscape Zoning & Civil Gauges
-    let currentZone = "metropolis"; // "farmland", "suburban", "metropolis"
-    const btnZoneFarmland = document.getElementById("btnZoneFarmland");
-    const btnZoneSuburban = document.getElementById("btnZoneSuburban");
-    const btnZoneMetropolis = document.getElementById("btnZoneMetropolis");
-
-    const gaugeScaffolding = document.getElementById("gaugeScaffolding");
-    const gaugeWindows = document.getElementById("gaugeWindows");
-    const gaugeLifts = document.getElementById("gaugeLifts");
-    const gaugeStairs = document.getElementById("gaugeStairs");
-
-    const txtDrag = document.getElementById("txtDrag");
-    const barDrag = document.getElementById("barDrag");
-    const txtDamperForce = document.getElementById("txtDamperForce");
-    const barDamper = document.getElementById("barDamper");
-    const tmdStatus = document.getElementById("tmdStatus");
-
-    function updateDay(day) {
-      currentDay = day;
-      daySlider.value = day;
-      hudDay.innerText = `Day ${String(day).padStart(3, '0')} / 365`;
-
-      const ratio = day / 365.0;
-      const meters = (ratio * 828.0).toFixed(1);
-      const floors = Math.floor(ratio * 163);
-      towerHeight.innerText = `${meters}m / ${floors} fl`;
-
-      if (day <= 60) {
-        phaseLabel.innerText = "Stage 0: Bedrock Cryptographic Caissons & IAM Root";
-      } else if (day <= 150) {
-        phaseLabel.innerText = "Stage 1: Concrete Core & Continuous Data Mesh";
-      } else if (day <= 250) {
-        phaseLabel.innerText = "Stage 2: Aerodynamic Glass Facade & WAF Ingress";
-      } else if (day <= 320) {
-        phaseLabel.innerText = "Stage 3: Tuned Mass Damper (L88 Shock Absorber)";
-      } else {
-        phaseLabel.innerText = "Stage 4: Stratospheric Spire & Final Occupancy Permit";
-      }
-
-      // Dynamic Google Gildan Civil Gauges
-      let scafVal = Math.min(100.0, 75.0 + (day / 365.0) * 25.0);
-      let winVal = dataBreach ? 62.0 : (legalFreeze ? 78.0 : Math.min(100.0, 70.0 + (day / 365.0) * 28.0));
-      let liftVal = trafficSurge ? 58.0 : (day >= 60 ? 96.0 : 50.0);
-      let stairVal = warSimulation ? 78.0 : 98.4;
-
-      if (gaugeScaffolding) gaugeScaffolding.innerText = `${scafVal.toFixed(1)}%`;
-      if (gaugeWindows) gaugeWindows.innerText = `${winVal.toFixed(1)}%`;
-      if (gaugeLifts) gaugeLifts.innerText = `${liftVal.toFixed(1)}%`;
-      if (gaugeStairs) gaugeStairs.innerText = `${stairVal.toFixed(1)}%`;
-
-      // Calculate Net Atmospheric Drag from Production Risks
-      let drag = 12.0 + Math.sin(day * 0.14) * 8;
-      let activeIncidents = [];
-
-      if (legalFreeze) {
-        drag += 40.0;
-        activeIncidents.push("❄️ New Law Injunction Drop");
-      }
-      if (dataBreach) {
-        drag += 45.0;
-        activeIncidents.push("⚡ Data Breach / Credential Leak");
-      }
-      if (techShift) {
-        drag += 35.0;
-        activeIncidents.push("🌪️ Upstream API Sunset / Disruptive Tech");
-      }
-      if (trafficSurge) {
-        drag += 30.0;
-        activeIncidents.push("🔥 10x Ingress Concurrency Spike");
-      }
-      if (actOfWar) {
-        drag += 50.0;
-        activeIncidents.push("⚔️ Act of War: Red-Team Pen-Test Siege");
-      }
-      if (warSimulation) {
-        drag += 60.0;
-        activeIncidents.push("🛡️ War Simulation: Breach & Progressive Collapse Rehearsal");
-      }
-
-      drag = Math.min(100.0, Math.max(5.0, drag));
-      txtDrag.innerText = `${drag.toFixed(1)}%`;
-      barDrag.style.width = `${drag}%`;
-
-      // Weather Metaphor Evaluation
-      if (activeIncidents.length > 0) {
-        crisisPill.classList.remove("hidden");
-        crisisMsg.innerText = `ACTIVE PRODUCTION HAZARDS: ${activeIncidents.join(' · ')}`;
-        hudClimate.innerText = "SEVERE WEATHER";
-        hudClimate.className = "text-rose-400 font-bold";
-        riskBadge.innerText = "HIGH VOLATILITY";
-        riskBadge.className = "text-[9px] px-1.5 py-0.2 bg-rose-950 text-rose-400 border border-rose-800 rounded";
-
-        // Damage logic (Damped by Level 88 TMD)
-        if (day >= 250) {
-          hp = Math.max(70.0, hp - 0.08);
-          txtDamperForce.innerText = "660-Ton TMD Active (-42% Vibration)";
-          barDamper.style.width = "85%";
-          tmdStatus.innerText = "ACTIVE ABSORPTION";
-          tmdStatus.className = "text-[9px] font-mono bg-amber-500/20 text-amber-300 border border-amber-500/40 px-1.5 py-0.5 rounded animate-pulse";
-        } else {
-          hp = Math.max(35.0, hp - 0.25);
-          txtDamperForce.innerText = "Damper Pending (FL 88 Required)";
-          barDamper.style.width = "10%";
-          tmdStatus.innerText = "STANDBY (FL 88)";
-        }
-      } else {
-        crisisPill.classList.add("hidden");
-        hudClimate.innerText = "CALM MARKET";
-        hudClimate.className = "text-emerald-400 font-bold";
-        riskBadge.innerText = "LOW VOLATILITY";
-        riskBadge.className = "text-[9px] px-1.5 py-0.2 bg-emerald-950 text-emerald-400 border border-emerald-800 rounded";
-        weatherIcon.innerText = "☀️";
-        weatherMetaphorTitle.innerText = "Fair Skies // Stable Runway";
-        weatherIncidentDesc.innerText = "Zero regulatory injunctions · Ingress stable at 450 req/s · Clean CI passes";
-        txtDamperForce.innerText = day >= 250 ? "0 N·m (Monitoring Clear Sky)" : "0 N·m (Standby until L88)";
-        barDamper.style.width = "4%";
-        tmdStatus.innerText = day >= 250 ? "ARMED // CALM" : "STANDBY (FL 88)";
-        hp = Math.min(100.0, hp + 0.1);
-      }
-
-      hudHp.innerText = `${hp.toFixed(1)}%`;
-      hudHp.className = hp > 70 ? "text-emerald-400 font-bold" : (hp > 45 ? "text-amber-400 font-bold" : "text-rose-400 font-bold animate-pulse");
-
-      if (day === 365) {
-        playTone(587.33, "triangle", 0.4);
-        setTimeout(() => playTone(880, "sine", 0.6), 250);
-      }
-    }
-
-    // ================= DRAWING ROUTINE =================
-    function render() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      const ratio = currentDay / 365.0;
-      const maxTowerPx = 430;
-      const currentHeightPx = ratio * maxTowerPx;
-      const baseY = 490;
-      const topY = baseY - currentHeightPx;
-      const centerX = 350;
-
-      // 0. Landscape Background Zoning
-      if (currentZone === "farmland") {
-        // Green/gold agricultural furrow fields
-        ctx.fillStyle = "rgba(16, 185, 129, 0.08)";
-        ctx.fillRect(0, baseY - 35, canvas.width, 85);
-        ctx.strokeStyle = "rgba(16, 185, 129, 0.25)";
-        ctx.lineWidth = 1;
-        for (let fx = 0; fx < canvas.width; fx += 35) {
-          ctx.beginPath();
-          ctx.moveTo(fx, baseY + 50);
-          ctx.lineTo(centerX + (fx - centerX) * 0.45, baseY - 30);
-          ctx.stroke();
-        }
-        // Radiating oceanic subsea fiber lines
-        ctx.strokeStyle = "#0284c7";
-        ctx.lineWidth = 2.5;
-        ctx.beginPath();
-        ctx.moveTo(centerX, baseY + 20);
-        ctx.lineTo(60, baseY + 45);
-        ctx.moveTo(centerX, baseY + 20);
-        ctx.lineTo(640, baseY + 45);
-        ctx.stroke();
-      } else if (currentZone === "suburban") {
-        // Utility grid and electrical substation lines
-        ctx.strokeStyle = "rgba(245, 158, 11, 0.25)";
-        ctx.lineWidth = 1.5;
-        ctx.beginPath();
-        ctx.moveTo(0, baseY - 15);
-        ctx.lineTo(canvas.width, baseY - 15);
-        ctx.moveTo(0, baseY + 15);
-        ctx.lineTo(canvas.width, baseY + 15);
-        ctx.stroke();
-        // Power poles
-        [90, 200, 500, 610].forEach(px => {
-          ctx.strokeStyle = "rgba(245, 158, 11, 0.4)";
-          ctx.beginPath();
-          ctx.moveTo(px, baseY + 20);
-          ctx.lineTo(px, baseY - 40);
-          ctx.lineTo(px - 15, baseY - 35);
-          ctx.lineTo(px + 15, baseY - 35);
-          ctx.stroke();
-        });
-      } else {
-        // Urban Metropolis: Surrounding partner towers & levitating Ferris wheel
-        ctx.fillStyle = "rgba(15, 23, 42, 0.65)";
-        ctx.fillRect(60, baseY - 180, 50, 180);
-        ctx.strokeRect(60, baseY - 180, 50, 180);
-        ctx.fillRect(140, baseY - 130, 45, 130);
-        ctx.strokeRect(140, baseY - 130, 45, 130);
-        ctx.fillRect(510, baseY - 150, 45, 150);
-        ctx.strokeRect(510, baseY - 150, 45, 150);
-        ctx.fillRect(580, baseY - 210, 55, 210);
-        ctx.strokeRect(580, baseY - 210, 55, 210);
-
-        // Levitating Ferris Wheel on left
-        const wheelX = 110;
-        const wheelY = 150;
-        const wheelAngle = Date.now() * 0.001;
-        ctx.strokeStyle = "rgba(56, 189, 248, 0.4)";
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.arc(wheelX, wheelY, 35, 0, Math.PI * 2);
-        ctx.stroke();
-        for (let a = 0; a < 6; a++) {
-          const rad = wheelAngle + (a * Math.PI / 3);
-          ctx.beginPath();
-          ctx.moveTo(wheelX, wheelY);
-          ctx.lineTo(wheelX + Math.cos(rad) * 35, wheelY + Math.sin(rad) * 35);
-          ctx.stroke();
-        }
-      }
-
-      const hasStorm = legalFreeze || dataBreach || techShift || trafficSurge || actOfWar || warSimulation;
-
-      // 1. Draw Production Weather Ingress (Wind/Storm Particles)
-      ctx.lineWidth = hasStorm ? 2.5 : 1;
-      for (let p of weatherParticles) {
-        ctx.strokeStyle = actOfWar ? "rgba(168, 85, 247, 0.85)" : (warSimulation ? "rgba(217, 70, 239, 0.9)" : (dataBreach ? "rgba(244, 63, 94, 0.6)" : (legalFreeze ? "rgba(129, 140, 248, 0.55)" : (techShift ? "rgba(245, 158, 11, 0.5)" : "rgba(56, 189, 248, 0.2)"))));
-        ctx.beginPath();
-        const slant = hasStorm ? 24 : 10;
-        ctx.moveTo(p.x, p.y);
-        ctx.lineTo(p.x + slant, p.y + p.len);
-        ctx.stroke();
-
-        p.y += p.speed * (hasStorm ? 1.8 : 1.0);
-        p.x += (hasStorm ? 3.2 : 1.2);
-        if (p.y > canvas.height) { p.y = -10; p.x = Math.random() * canvas.width; }
-        if (p.x > canvas.width) { p.x = 0; }
-      }
-
-      // 2. Bedrock & Caissons (Stage 0: Cryptographic Root of Trust)
-      ctx.fillStyle = "#0f172a";
-      ctx.fillRect(0, baseY, canvas.width, 50);
-      ctx.strokeStyle = "#1e293b";
-      ctx.lineWidth = 2;
-      ctx.strokeRect(0, baseY, canvas.width, 50);
-
-      // Deep Piles / Caissons
-      ctx.strokeStyle = "#10b981";
-      ctx.lineWidth = 6;
-      [270, 310, 350, 390, 430].forEach(cx => {
-        ctx.beginPath();
-        ctx.moveTo(cx, baseY);
-        ctx.lineTo(cx, baseY + 38);
-        ctx.stroke();
-      });
-
-      // 3. Superstructure
-      if (currentHeightPx > 6) {
-        const baseWidth = 140;
-        const topWidth = Math.max(26, baseWidth - (ratio * 112));
-
-        // Facade Gradient
-        const grad = ctx.createLinearGradient(centerX - baseWidth/2, baseY, centerX + baseWidth/2, topY);
-        grad.addColorStop(0, "rgba(2, 132, 199, 0.35)");
-        grad.addColorStop(0.5, "rgba(56, 189, 248, 0.65)");
-        grad.addColorStop(1, "rgba(168, 85, 247, 0.75)");
-
-        ctx.beginPath();
-        ctx.moveTo(centerX - baseWidth/2, baseY);
-        ctx.lineTo(centerX - topWidth/2, topY);
-        ctx.lineTo(centerX + topWidth/2, topY);
-        ctx.lineTo(centerX + baseWidth/2, baseY);
-        ctx.closePath();
-
-        ctx.fillStyle = grad;
-        ctx.fill();
-        ctx.strokeStyle = hasStorm ? "#f43f5e" : "#38bdf8";
-        ctx.lineWidth = 2;
-        ctx.stroke();
-
-        // Concrete Data Core Spine
-        ctx.fillStyle = "rgba(15, 23, 42, 0.85)";
-        ctx.fillRect(centerX - 16, topY, 32, currentHeightPx);
-        ctx.strokeStyle = "#38bdf8";
-        ctx.lineWidth = 1;
-        ctx.strokeRect(centerX - 16, topY, 32, currentHeightPx);
-
-        // Core data pulses
-        ctx.fillStyle = "#38bdf8";
-        for (let dp of corePackets) {
-          if (dp.y > topY && dp.y < baseY) {
-            ctx.beginPath();
-            ctx.arc(centerX, dp.y, 3, 0, Math.PI * 2);
-            ctx.fill();
-            dp.y -= dp.speed;
-          } else {
-            dp.y = baseY;
-          }
-        }
-
-        // Floor plates
-        const drawnFloors = Math.floor(ratio * 32);
-        ctx.strokeStyle = "rgba(255, 255, 255, 0.25)";
-        ctx.lineWidth = 1;
-        for (let i = 1; i <= drawnFloors; i++) {
-          const fy = baseY - (i / 32) * currentHeightPx;
-          const fw = baseWidth - ((baseY - fy) / maxTowerPx) * 112;
-          ctx.beginPath();
-          ctx.moveTo(centerX - fw/2, fy);
-          ctx.lineTo(centerX + fw/2, fy);
-          ctx.stroke();
-        }
-
-        // Diagrid cross bracing
-        ctx.strokeStyle = "rgba(129, 140, 248, 0.35)";
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(centerX - baseWidth/2, baseY);
-        ctx.lineTo(centerX + topWidth/2, topY);
-        ctx.moveTo(centerX + baseWidth/2, baseY);
-        ctx.lineTo(centerX - topWidth/2, topY);
-        ctx.stroke();
-      }
-
-      // 4. Tuned Mass Damper (Level 88: The Production Shock Absorber)
-      if (currentDay >= 250) {
-        const damperY = baseY - (280 / 365.0) * maxTowerPx;
-        const targetOffset = hasStorm ? Math.sin(Date.now() * 0.006) * 18 : Math.sin(Date.now() * 0.002) * 5;
-        damperAngle += (targetOffset - damperAngle) * 0.09;
-
-        // Suspension Cables
-        ctx.strokeStyle = "#f59e0b";
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(centerX - 10, damperY - 22);
-        ctx.lineTo(centerX + damperAngle, damperY + 12);
-        ctx.moveTo(centerX + 10, damperY - 22);
-        ctx.lineTo(centerX + damperAngle, damperY + 12);
-        ctx.stroke();
-
-        // 660-Ton Golden Pendulum
-        const goldGrad = ctx.createRadialGradient(
-          centerX + damperAngle - 4, damperY + 10, 2,
-          centerX + damperAngle, damperY + 12, 14
-        );
-        goldGrad.addColorStop(0, "#fef08a");
-        goldGrad.addColorStop(0.5, "#f59e0b");
-        goldGrad.addColorStop(1, "#92400e");
-
-        ctx.fillStyle = goldGrad;
-        ctx.beginPath();
-        ctx.arc(centerX + damperAngle, damperY + 12, 13, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.strokeStyle = "#fef08a";
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
-      }
-
-      // 5. Crown Needle Spire
-      if (currentDay >= 320) {
-        const spireProgress = (currentDay - 320) / 45.0;
-        const spirePx = spireProgress * 48;
-        ctx.strokeStyle = "#ffffff";
-        ctx.lineWidth = 3;
-        ctx.beginPath();
-        ctx.moveTo(centerX, topY);
-        ctx.lineTo(centerX, topY - spirePx);
-        ctx.stroke();
-
-        if (currentDay >= 350) {
-          const flash = (Math.sin(Date.now() * 0.008) + 1) / 2;
-          ctx.fillStyle = `rgba(244, 63, 94, ${flash})`;
-          ctx.beginPath();
-          ctx.arc(centerX, topY - spirePx, 5, 0, Math.PI * 2);
-          ctx.fill();
-        }
-      }
-
-      // 6. Construction Crane
-      if (currentDay < 365) {
-        ctx.strokeStyle = "#f59e0b";
-        ctx.lineWidth = 2.5;
-        ctx.beginPath();
-        ctx.moveTo(centerX + 14, topY);
-        ctx.lineTo(centerX + 14, topY - 32);
-        ctx.lineTo(centerX + 48, topY - 32);
-        ctx.moveTo(centerX + 14, topY - 32);
-        ctx.lineTo(centerX - 16, topY - 32);
-        ctx.stroke();
-      }
-
-      // 7. Act of War (Red-Team Siege Artillery & Deflection Sparks)
-      if (actOfWar) {
-        const pulse = (Math.sin(Date.now() * 0.01) + 1) / 2;
-        ctx.strokeStyle = `rgba(168, 85, 247, ${0.4 + pulse * 0.5})`;
-        ctx.lineWidth = 3;
-        for (let i = 0; i < 4; i++) {
-          const arcY = topY + (i / 4) * currentHeightPx;
-          ctx.beginPath();
-          ctx.arc(centerX - 90, arcY, 40 + pulse * 15, -Math.PI / 4, Math.PI / 4);
-          ctx.stroke();
-        }
-        // Blast shield sparks on facade
-        ctx.fillStyle = "#e879f9";
-        for (let s = 0; s < 6; s++) {
-          const sx = centerX - 40 + Math.random() * 80;
-          const sy = topY + Math.random() * currentHeightPx;
-          ctx.fillRect(sx, sy, 3, 3);
-        }
-      }
-
-      // 8. War Simulation (Breach Blast Bulkheads & Stratospheric Laser Link)
-      if (warSimulation) {
-        // Compartmentalized blast bulkheads
-        ctx.strokeStyle = "rgba(217, 70, 239, 0.9)";
-        ctx.lineWidth = 2;
-        ctx.setLineDash([4, 4]);
-        for (let b = 1; b <= 5; b++) {
-          const by = baseY - (b / 6) * currentHeightPx;
-          ctx.beginPath();
-          ctx.moveTo(centerX - 70, by);
-          ctx.lineTo(centerX + 70, by);
-          ctx.stroke();
-        }
-        ctx.setLineDash([]);
-
-        // Out-of-band space switch laser uplink
-        ctx.strokeStyle = "#c084fc";
-        ctx.lineWidth = 2.5;
-        ctx.beginPath();
-        ctx.moveTo(centerX, topY);
-        ctx.lineTo(centerX + 120, -50);
-        ctx.stroke();
-      }
-
-      requestAnimationFrame(render);
-    }
-
-    // ================= EVENT LISTENERS =================
-    daySlider.addEventListener("input", (e) => {
-      updateDay(parseInt(e.target.value));
-    });
-
-    // Landscape Zoning Event Handlers
-    function setZone(zone) {
-      currentZone = zone;
-      if (btnZoneFarmland) btnZoneFarmland.className = zone === "farmland" 
-        ? "flex-1 py-1.5 px-2 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-bold transition flex items-center justify-center gap-1 shadow-sm"
-        : "flex-1 py-1.5 px-2 rounded-lg text-slate-300 hover:text-emerald-300 hover:bg-emerald-950/40 text-[10px] font-bold transition flex items-center justify-center gap-1";
-
-      if (btnZoneSuburban) btnZoneSuburban.className = zone === "suburban"
-        ? "flex-1 py-1.5 px-2 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-bold transition flex items-center justify-center gap-1 shadow-sm"
-        : "flex-1 py-1.5 px-2 rounded-lg text-slate-300 hover:text-amber-300 hover:bg-amber-950/40 text-[10px] font-bold transition flex items-center justify-center gap-1";
-
-      if (btnZoneMetropolis) btnZoneMetropolis.className = zone === "metropolis"
-        ? "flex-1 py-1.5 px-2 rounded-lg bg-sky-500/20 text-sky-300 border border-sky-500/40 text-[10px] font-bold transition flex items-center justify-center gap-1 shadow-sm"
-        : "flex-1 py-1.5 px-2 rounded-lg text-slate-300 hover:text-sky-300 hover:bg-sky-950/40 text-[10px] font-bold transition flex items-center justify-center gap-1";
-
-      if (zone === "farmland") playTone(392, "sine", 0.2);
-      else if (zone === "suburban") playTone(440, "triangle", 0.2);
-      else playTone(523.25, "sine", 0.2);
-    }
-
-    if (btnZoneFarmland) btnZoneFarmland.addEventListener("click", () => setZone("farmland"));
-    if (btnZoneSuburban) btnZoneSuburban.addEventListener("click", () => setZone("suburban"));
-    if (btnZoneMetropolis) btnZoneMetropolis.addEventListener("click", () => setZone("metropolis"));
-
-    btnPlay.addEventListener("click", () => {
-      if (isPlaying) {
-        clearInterval(timer);
-        isPlaying = false;
-        playLabel.innerText = "RESUME BUILD";
-        playIcon.innerText = "▶";
-      } else {
-        if (currentDay >= 365) currentDay = 1;
-        isPlaying = true;
-        playLabel.innerText = "PAUSE SIMULATION";
-        playIcon.innerText = "⏸";
-
-        timer = setInterval(() => {
-          if (currentDay >= 365) {
-            clearInterval(timer);
-            isPlaying = false;
-            playLabel.innerText = "RESTART BUILD";
-            playIcon.innerText = "↺";
-            return;
-          }
-          currentDay++;
-          updateDay(currentDay);
-          if (currentDay % 20 === 0) playTone(440, "sine", 0.08);
-        }, 75);
-      }
-    });
-
-    // Metaphor Injector 1: Legal Injunction Drop
-    btnLegalStorm.addEventListener("click", () => {
-      legalFreeze = !legalFreeze;
-      btnLegalStorm.className = legalFreeze 
-        ? "px-2.5 py-2 bg-indigo-600 text-slate-950 font-bold rounded-lg text-xs font-mono transition shadow-lg shadow-indigo-600/40 text-left flex flex-col"
-        : "px-2.5 py-2 bg-indigo-950/60 hover:bg-indigo-900/80 text-indigo-300 border border-indigo-700/60 rounded-lg text-xs font-mono transition text-left flex flex-col";
-      weatherIcon.innerText = "❄️";
-      weatherMetaphorTitle.innerText = "Polar Freeze // New Law Drop";
-      weatherIncidentDesc.innerText = "EU AI Act High-Risk Injunction: Uncertified modules halted for compliance audit.";
-      playTone(220, "sawtooth", 0.35);
-      updateDay(currentDay);
-    });
-
-    // Metaphor Injector 2: Data Breach / Leak
-    btnDataBreach.addEventListener("click", () => {
-      dataBreach = !dataBreach;
-      btnDataBreach.className = dataBreach 
-        ? "px-2.5 py-2 bg-rose-600 text-slate-950 font-bold rounded-lg text-xs font-mono transition shadow-lg shadow-rose-600/40 text-left flex flex-col"
-        : "px-2.5 py-2 bg-rose-950/60 hover:bg-rose-900/80 text-rose-300 border border-rose-700/60 rounded-lg text-xs font-mono transition text-left flex flex-col";
-      weatherIcon.innerText = "⚡";
-      weatherMetaphorTitle.innerText = "Lightning Strike // Data Breach";
-      weatherIncidentDesc.innerText = "Credential exfiltration probe detected! Faraday cage grounding isolation engaged.";
-      playTone(150, "square", 0.35);
-      updateDay(currentDay);
-    });
-
-    // Metaphor Injector 3: Tech Paradigm Shift / API Sunset
-    btnTechShift.addEventListener("click", () => {
-      techShift = !techShift;
-      btnTechShift.className = techShift 
-        ? "px-2.5 py-2 bg-amber-600 text-slate-950 font-bold rounded-lg text-xs font-mono transition shadow-lg shadow-amber-600/40 text-left flex flex-col"
-        : "px-2.5 py-2 bg-amber-950/60 hover:bg-amber-900/80 text-amber-300 border border-amber-700/60 rounded-lg text-xs font-mono transition text-left flex flex-col";
-      weatherIcon.innerText = "🌪️";
-      weatherMetaphorTitle.innerText = "Gale Crosswinds // Vendor Sunset";
-      weatherIncidentDesc.innerText = "Upstream REST API deprecated with 30-day notice! Tuned Mass Damper proxy engaged.";
-      playTone(293.66, "sine", 0.3);
-      updateDay(currentDay);
-    });
-
-    // Metaphor Injector 4: Traffic Surge / Heat Dome
-    btnTrafficSurge.addEventListener("click", () => {
-      trafficSurge = !trafficSurge;
-      btnTrafficSurge.className = trafficSurge 
-        ? "px-2.5 py-2 bg-orange-600 text-slate-950 font-bold rounded-lg text-xs font-mono transition shadow-lg shadow-orange-600/40 text-left flex flex-col"
-        : "px-2.5 py-2 bg-orange-950/60 hover:bg-orange-900/80 text-orange-300 border border-orange-700/60 rounded-lg text-xs font-mono transition text-left flex flex-col";
-      weatherIcon.innerText = "🔥";
-      weatherMetaphorTitle.innerText = "Heat Dome // 10x Ingress Surge";
-      weatherIncidentDesc.innerText = "Cloud compute thermal exhaustion! Rate-limiting fins and Redis buffer active.";
-      playTone(329.63, "triangle", 0.3);
-      updateDay(currentDay);
-    });
-
-    // Fortress Injector 1: Act of War (Red-Team Pen-Test)
-    btnActOfWar.addEventListener("click", () => {
-      actOfWar = !actOfWar;
-      btnActOfWar.className = actOfWar 
-        ? "px-2.5 py-2 bg-purple-600 text-slate-950 font-bold rounded-lg text-xs font-mono transition shadow-lg shadow-purple-600/40 text-left flex items-center justify-between"
-        : "px-2.5 py-2 bg-purple-950/60 hover:bg-purple-900/80 text-purple-300 border border-purple-700/60 rounded-lg text-xs font-mono transition text-left flex items-center justify-between";
-      weatherIcon.innerText = "⚔️";
-      weatherMetaphorTitle.innerText = "Act of War // Red-Team Pen-Test";
-      weatherIncidentDesc.innerText = "Hostile adversary siege emulation: SQLi/RCE artillery bombardment tested against WAF armor.";
-      playTone(180, "sawtooth", 0.4);
-      updateDay(currentDay);
-    });
-
-    // Fortress Injector 2: War Simulation (Security Breach Rehearsal)
-    btnWarSimulation.addEventListener("click", () => {
-      warSimulation = !warSimulation;
-      btnWarSimulation.className = warSimulation 
-        ? "px-2.5 py-2 bg-fuchsia-600 text-slate-950 font-bold rounded-lg text-xs font-mono transition shadow-lg shadow-fuchsia-600/40 text-left flex items-center justify-between"
-        : "px-2.5 py-2 bg-fuchsia-950/60 hover:bg-fuchsia-900/80 text-fuchsia-300 border border-fuchsia-700/60 rounded-lg text-xs font-mono transition text-left flex items-center justify-between";
-      weatherIcon.innerText = "🛡️";
-      weatherMetaphorTitle.innerText = "War Simulation // Breach Rehearsal";
-      weatherIncidentDesc.innerText = "GSA Progressive Collapse Drill: Blast bulkheads seal VPC clusters; space switch failover active.";
-      playTone(130, "square", 0.45);
-      updateDay(currentDay);
-    });
-
-    // Deploy Mitigation Action
-    btnDeployMitigation.addEventListener("click", () => {
-      legalFreeze = false;
-      dataBreach = false;
-      techShift = false;
-      trafficSurge = false;
-      actOfWar = false;
-      warSimulation = false;
-      hp = Math.min(100.0, hp + 25.0);
-
-      btnLegalStorm.className = "px-2.5 py-2 bg-indigo-950/60 hover:bg-indigo-900/80 text-indigo-300 border border-indigo-700/60 rounded-lg text-xs font-mono transition text-left flex flex-col";
-      btnDataBreach.className = "px-2.5 py-2 bg-rose-950/60 hover:bg-rose-900/80 text-rose-300 border border-rose-700/60 rounded-lg text-xs font-mono transition text-left flex flex-col";
-      btnTechShift.className = "px-2.5 py-2 bg-amber-950/60 hover:bg-amber-900/80 text-amber-300 border border-amber-700/60 rounded-lg text-xs font-mono transition text-left flex flex-col";
-      btnTrafficSurge.className = "px-2.5 py-2 bg-orange-950/60 hover:bg-orange-900/80 text-orange-300 border border-orange-700/60 rounded-lg text-xs font-mono transition text-left flex flex-col";
-      btnActOfWar.className = "px-2.5 py-2 bg-purple-950/60 hover:bg-purple-900/80 text-purple-300 border border-purple-700/60 rounded-lg text-xs font-mono transition text-left flex items-center justify-between";
-      btnWarSimulation.className = "px-2.5 py-2 bg-fuchsia-950/60 hover:bg-fuchsia-900/80 text-fuchsia-300 border border-fuchsia-700/60 rounded-lg text-xs font-mono transition text-left flex items-center justify-between";
-
-      crisisPill.classList.add("hidden");
-      weatherIcon.innerText = "🟢";
-      weatherMetaphorTitle.innerText = "MITIGATION DEPLOYED // System Hardened";
-      weatherIncidentDesc.innerText = "Circuit breakers reset, compliance file verified, and dual-ingestion bridge active.";
-      updateDay(currentDay);
-      playTone(659.25, "sine", 0.25);
-    });
-
-    btnAudio.addEventListener("click", () => {
-      audioEnabled = !audioEnabled;
-      btnAudio.innerText = audioEnabled ? "🔊 AUDIO: ON" : "🔇 AUDIO: OFF";
-      btnAudio.className = audioEnabled 
-        ? "px-2.5 py-2 bg-sky-500/20 border border-sky-500/40 text-sky-400 rounded-lg text-xs font-mono transition" 
-        : "px-2.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-400 rounded-lg text-xs font-mono transition";
-      if (audioEnabled) playTone(523.25, "sine", 0.15);
-    });
-
-    btnReset.addEventListener("click", () => {
-      clearInterval(timer);
-      isPlaying = false;
-      legalFreeze = false;
-      dataBreach = false;
-      techShift = false;
-      trafficSurge = false;
-      actOfWar = false;
-      warSimulation = false;
-      hp = 100.0;
-      playLabel.innerText = "RUN 365-DAY BUILD";
-      playIcon.innerText = "▶";
-      updateDay(1);
-    });
-
-    // ================= LEADERBOARD CONTROLLER =================
-    const modalLeaderboard = document.getElementById("modalLeaderboard");
-    const btnOpenLeaderboard = document.getElementById("btnOpenLeaderboard");
-    const btnCloseLeaderboard = document.getElementById("btnCloseLeaderboard");
-    const leaderboardRows = document.getElementById("leaderboardRows");
-    const btnFilterAll = document.getElementById("btnFilterAll");
-    const btnFilterFarmland = document.getElementById("btnFilterFarmland");
-    const btnFilterSuburban = document.getElementById("btnFilterSuburban");
-    const btnFilterMetropolis = document.getElementById("btnFilterMetropolis");
-    const btnRankCurrentSim = document.getElementById("btnRankCurrentSim");
-
-    let currentLeaderboardFilter = "all";
-    const leaderboardEntries = [
-      { rank: 1, name: "Google Titan HSM & 8.8.8.8 Anycast DNS", zone: "farmland", zoneLabel: "🌾 Farmland", civil: 99.2, risk: 0.8, status: "Indestructible Metamorphic Bedrock" },
-      { rank: 2, name: "Dunant Transoceanic Subsea Optical Mesh", zone: "farmland", zoneLabel: "🌾 Farmland", civil: 98.6, risk: 1.4, status: "Abyssal Pressure Shielded" },
-      { rank: 3, name: "Google Search Index & Ad Auction Core", zone: "farmland", zoneLabel: "🌾 Farmland", civil: 97.5, risk: 2.5, status: "Generational Durability" },
-      { rank: 4, name: "Google Cloud Spanner & IAM Paxos Root", zone: "suburban", zoneLabel: "🏡 Suburban", civil: 96.8, risk: 3.2, status: "Multi-Region Quorum" },
-      { rank: 5, name: "Google Gildan Sovereign Production Engine", zone: "metropolis", zoneLabel: "🏙️ Metropolis", civil: 95.0, risk: 5.0, status: "Level 4 Self-Healing" },
-      { rank: 6, name: "Firebase Realtime & Google Maps SDK", zone: "suburban", zoneLabel: "🏡 Suburban", civil: 91.2, risk: 8.8, status: "Buffered Concurrency" },
-      { rank: 7, name: "Partner GenAI Agentic Fintech Spire", zone: "metropolis", zoneLabel: "🏙️ Metropolis", civil: 84.5, risk: 15.5, status: "Level 88 Damper Active" },
-      { rank: 8, name: "Experimental Autonomous Microservice MVP", zone: "metropolis", zoneLabel: "🏙️ Metropolis", civil: 68.0, risk: 32.0, status: "High Weather Drag" }
-    ];
-
-    function renderLeaderboardTable() {
-      if (!leaderboardRows) return;
-      leaderboardRows.innerHTML = "";
-      
-      const filtered = currentLeaderboardFilter === "all" 
-        ? leaderboardEntries 
-        : leaderboardEntries.filter(e => e.zone === currentLeaderboardFilter);
-
-      filtered.forEach((entry, idx) => {
-        const tr = document.createElement("tr");
-        tr.className = "hover:bg-slate-900/80 transition font-mono";
-
-        const medal = entry.rank === 1 ? "🥇 #1" : (entry.rank === 2 ? "🥈 #2" : (entry.rank === 3 ? "🥉 #3" : `#${entry.rank}`));
-        const riskColor = entry.risk <= 5.0 ? "text-emerald-400 font-bold" : (entry.risk <= 15.0 ? "text-amber-400 font-bold" : "text-rose-400 font-bold");
-        const zoneBadgeClass = entry.zone === "farmland" ? "bg-emerald-950 text-emerald-300 border-emerald-800" : (entry.zone === "suburban" ? "bg-amber-950 text-amber-300 border-amber-800" : "bg-sky-950 text-sky-300 border-sky-800");
-
-        tr.innerHTML = `
-          <td class="py-2.5 px-3 font-bold text-amber-400">${medal}</td>
-          <td class="py-2.5 px-3">
-            <div class="text-slate-100 font-bold">${entry.name}</div>
-            <div class="text-[9px] text-slate-400">${entry.status}</div>
-          </td>
-          <td class="py-2.5 px-3">
-            <span class="px-1.5 py-0.5 rounded border text-[9px] ${zoneBadgeClass}">${entry.zoneLabel}</span>
-          </td>
-          <td class="py-2.5 px-3 font-bold text-slate-300">${entry.civil.toFixed(1)}%</td>
-          <td class="py-2.5 px-3 text-right ${riskColor} text-sm">${entry.risk.toFixed(1)}%</td>
-        `;
-        leaderboardRows.appendChild(tr);
-      });
-    }
-
-    if (btnOpenLeaderboard) {
-      btnOpenLeaderboard.addEventListener("click", () => {
-        renderLeaderboardTable();
-        modalLeaderboard.classList.remove("hidden");
-        playTone(587.33, "triangle", 0.15);
-      });
-    }
-
-    if (btnCloseLeaderboard) {
-      btnCloseLeaderboard.addEventListener("click", () => {
-        modalLeaderboard.classList.add("hidden");
-      });
-    }
-
-    function setLeaderboardFilter(filter) {
-      currentLeaderboardFilter = filter;
-      const btns = [btnFilterAll, btnFilterFarmland, btnFilterSuburban, btnFilterMetropolis];
-      btns.forEach(b => {
-        if (!b) return;
-        b.className = "px-2.5 py-1 rounded-md bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800 text-[10px] font-bold";
-      });
-      if (filter === "all" && btnFilterAll) btnFilterAll.className = "px-2.5 py-1 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-bold";
-      if (filter === "farmland" && btnFilterFarmland) btnFilterFarmland.className = "px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-bold";
-      if (filter === "suburban" && btnFilterSuburban) btnFilterSuburban.className = "px-2.5 py-1 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-bold";
-      if (filter === "metropolis" && btnFilterMetropolis) btnFilterMetropolis.className = "px-2.5 py-1 rounded-md bg-sky-500/20 text-sky-300 border border-sky-500/40 text-[10px] font-bold";
-      renderLeaderboardTable();
-      playTone(440, "sine", 0.08);
-    }
-
-    if (btnFilterAll) btnFilterAll.addEventListener("click", () => setLeaderboardFilter("all"));
-    if (btnFilterFarmland) btnFilterFarmland.addEventListener("click", () => setLeaderboardFilter("farmland"));
-    if (btnFilterSuburban) btnFilterSuburban.addEventListener("click", () => setLeaderboardFilter("suburban"));
-    if (btnFilterMetropolis) btnFilterMetropolis.addEventListener("click", () => setLeaderboardFilter("metropolis"));
-
-    if (btnRankCurrentSim) {
-      btnRankCurrentSim.addEventListener("click", () => {
-        const simCivil = hp;
-        const simRisk = Math.max(0.0, 100.0 - hp);
-        
-        // Remove existing current session if present
-        const idx = leaderboardEntries.findIndex(e => e.name.includes("Current Active Session"));
-        if (idx >= 0) leaderboardEntries.splice(idx, 1);
-
-        leaderboardEntries.push({
-          rank: 99,
-          name: `Current Active Session (Day ${currentDay})`,
-          zone: currentZone,
-          zoneLabel: currentZone === "farmland" ? "🌾 Farmland" : (currentZone === "suburban" ? "🏡 Suburban" : "🏙️ Metropolis"),
-          civil: simCivil,
-          risk: parseFloat(simRisk.toFixed(1)),
-          status: `Active Build (${towerHeight.innerText})`
-        });
-
-        // Re-sort (LOWER IS BETTER!)
-        leaderboardEntries.sort((a, b) => a.risk - b.risk);
-        leaderboardEntries.forEach((e, i) => e.rank = i + 1);
-
-        renderLeaderboardTable();
-        playTone(659.25, "sine", 0.25);
-      });
-    }
-
-    // Start
-    updateDay(1);
-    render();
   </script>
 </body>
 </html>
